@@ -1,18 +1,18 @@
 @charset "UTF-8";
 
-h1 {
-    color: #454545;
-    background-color: #757575;
+.container {
+    padding: 40px;
+    background-color: black;
+    display: flex;
+    justify-content: ;
 }
 
-li {
-    font-family: Verdana;
-    font-size: 28px;
-    text-decoration: overline;
-    text-align: center;
+.card {
+    width: 300px;
+    background-color: white;
+    height: 180px;
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: column;
     
-}
-h2 {
-    font-weight: normal;
-    text-align: r
 }
