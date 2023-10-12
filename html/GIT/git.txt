@@ -1,0 +1,56 @@
+git init - inicia um repositorio git na pasta raiz do projeto (será criada uma pasta oculta de nome .git, é ela que reprensenta o repositorio e contem toda a inteligencia do git)
+
+apos iniciado repositorio a pasta passa a ser chamada pasta de trabalho ou working area
+
+stage - cauque- indige (local onde é armazenado os arquivos modificados)
+
+git add <arquivo> adiciona ao stage
+
+git commit adiciona os arquivos ao repositorio de fato gerando um numeor de versão o rest
+
+git commit -m "mensagem descretiva a respeito do arquivo"
+
+branch - ramo, copia do projeto.
+git branch + nome (cria a branch)
+
+git branch lista as branchs existentes
+
+git checkout nome
+
+git dif (mostra as mudanças execultadas na versão)
+
+git status (mostra o status dos arquivos, se foram modificados e se estão sendo monitorados ou não- vermelho ) 
+
+git clone clona um repositorio
+
+git push envia todos os commits para o repositorio remoto
+
+git pull puxa as mudanças feitas no repositorio remoto pára o local
+
+merge mesclar branchs
+
+git merge nome do arquivo mescla a branch varialvel na principal
+
+git rm --cached <file> retirar do stage antes de comitar
+
+git log <file> possibilita visualizar o histórico dos commits por arquivo e o comando git log mostra todos eles
+
+git commit --amend (mudar a mensagem do commit)
+
+touch cria arquivos diretamente via terminal
+
+git rm nome arquivo (remover um arquivo)
+
+git mv <nome do arquivo antes> <nome do arquivo depois>
+
+git reset HEAD <name> tira da stage area
+
+git checkout (*hash) -- <name> desfazer mudanças em um arquivo
+
+cat <name archive> mostra o conteudo do arquivo
+
+git commit --amend -m "" mudar o teste do comit fazendo com que seja feito um novo comit e criando um novo
+
+git clean -n / git clean -f limpar asquivos da pasta.
+
+g
