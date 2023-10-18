@@ -1,0 +1,21 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+}
+h1, p {
+    text-align: center;
+}
+
+.relogios {
+    display: flex;
+    background-color: #444;
+    width: 200px;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    margin: 0 auto;
+    color: rgb(61, 245, 61);
+}

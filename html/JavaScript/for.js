@@ -40,7 +40,6 @@ if (!encontrou_Habilitado) {
     console.log("Nenhum funcionário habilitado encontrado");
 };
 
-*/
 
 let emails_alunos = [
     "danilo@email.com",
@@ -54,3 +53,6 @@ for ( let email of emails_alunos ) {
     console.log("Email: " + email);
 
 }
+    */
+
+
