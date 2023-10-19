@@ -77,8 +77,31 @@ const produtos = [
   carrinho.forEach(imprimirItem);
   */
 
-  // .map()
-/*
+  // .map()  
+  
+  /*
+
+  let el = document.getElementsByTagName("div");
+  el=[...el]; // recebe um arrey do tipo spred, recebendo os dados da coleção el espalhados e posibilitando iteração dos metodos arrey.
+  
+  el.map((e,i) => {
+    e.innerHTML = "Qualquer coisa" // altera o conteudo das tags
+    console.log(e.innerHTML); // vai trazer somente o conteudo dentro das tags
+  });
+
+***
+  const cursos = ['HTML', 'JavaScript', 'PHP', 'React'];
+ let c_arrey_novo = cursos.map((elementos, indice) => {
+    return "<div class='teste'>"+elementos+"</div>"
+  });
+  console.log(c_arrey_novo);
+  ****
+  const cursos = ['HTML', 'JavaScript', 'PHP', 'React'];
+  cursos.map((elementos, indice) => {
+    console.log(`Curso: ${elementos} - posição de numero: ${indice + 1}`)
+  });
+
+------------------------------------
 const carros = [
     { marca: 'Fiat', modelo: 'Uno', anoFabricacao: 2015 },
     { marca: 'GM', modelo: 'Onix', anoFabricacao: 2018 },
@@ -231,5 +254,21 @@ const itensCarrinho = [
   const valorAPagar = itensCarrinho.reduce(somarValor, 0);
   
   console.log(valorAPagar);
+****
+const names = ["Daniel","Maria","Marta","Juca","João","Jéssica"];
+
+const namesCount = names.reduce((contador, nomeAtual) => {
+  const primeiraLetra = nomeAtual[0].toLowerCase()
+
+  if (contador[primeiraLetra]) {
+    contador[primeiraLetra]++
+  } else {
+    contador[primeiraLetra] = 1
+  }
+  return contador;
+}, {});
+
+console.log(namesCount);
+
 
 */
