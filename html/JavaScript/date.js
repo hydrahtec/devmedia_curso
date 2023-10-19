@@ -35,7 +35,17 @@ const intervalo=setInterval(relogio,1000);
 
 */
 
+const dataAtual = new Date();
 
+const ano = dataAtual.getFullYear();
+
+const proximoAno = ano + 1;
+
+console.log(proximoAno);
+
+
+
+/*
 const hoje = new Date();
 const vencimento = new Date('2020-07-02');
 
@@ -51,7 +61,7 @@ if (hoje.getTime() > vencimento.getTime())
 
 console.log(mensagem);
 
-
+*/
 
 /*
 const totalAcertos = 4;

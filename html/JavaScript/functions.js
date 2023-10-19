@@ -1,11 +1,78 @@
 
 
+/*
+// funções geradoras tem o seu funcionamento adiado até ela ser chamada que vai retornando coisas ao longo da execução.
 
+function* cores () {
+    yield 'Vermelho'
+    yield 'Azul'
+    yield 'Amarelo'
+    yield 'Verde'
+};
 
-
+const itc = cores();
+console.log(itc.next().value);
+console.log(itc.next().value);
+console.log(itc.next().value);
+console.log(itc.next().value);
+*/
 
 /*
+// arrow function
+const soma= (v1, v2) => {
+    let res = v1 + v2;
+    return res;
+} ;
+console.log(soma(10,5));
 
+// construsão mais simples se só houver apenas uma linha de codigo.
+const nome = n => n; 
+console.log(nome("Eliel"));
+
+const add = n => n+10;
+console.log(add(10));
+*/
+
+/*
+const f = function () { // funçaõ anonima
+
+};
+
+const g = new Fanction ("v1","v2", "return v1+v2"); // funcção construtor anonima
+*/
+
+/*
+function soma(...valores) {
+    let tam = valores.length;
+    let res = 0;
+
+    for (let i = 0; i < tam; i++) {
+        res += valores[i];
+
+    };
+    
+    return res;
+};
+
+console.log(soma(10,5,3,8,2,2))
+
+--------------
+
+function soma(...valores) {
+    let res = 0;
+
+    for (let v of valores) {
+        res += v;
+
+    };
+    
+    return res;
+};
+
+console.log(soma(10,5,3,8,2,2))
+*/
+
+/*
 --------------------------------------------------
 let colecao_signos = [
     {nome: "Aquarios", DataInicio: "01-20", DataFim: "02-18"},
