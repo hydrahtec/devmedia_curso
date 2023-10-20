@@ -1,5 +1,57 @@
 
 
+
+
+
+
+/*
+let series = [
+    {nome: 'Loki', servico: 'Disney+'},
+	{nome: 'Friends', servico: 'HBO'},
+	{nome: 'Superman & Lois', servico: 'HBO'},
+	{nome: 'WandaVision', servico: 'Disney+'},
+];
+
+export default series;
+
+series.js
+
+
+function retornaSeriesDisney(serie)
+{
+	return (serie.servico == 'Disney+');
+}
+
+function retornaSeriesHBO(serie)
+{
+	return (serie.servico == 'HBO');
+}
+
+export {retornaSeriesDisney, retornaSeriesHBO};
+
+retornaSeries.js
+
+
+import series from './series.js';
+import {retornaSeriesDisney, retornaSeriesHBO} from 'retornaSeries.js';
+
+let servico = 'Disney';
+let retornaSeries = [];
+
+switch(servico)
+{
+    case 'Disney':
+        retornaSeries = series.nome;
+        break;
+    case 'HBO':
+        retornaSeries = series.nome;    
+        break;
+}
+
+retornaSeries.forEach(serie => {
+	console.log(serie.nome);
+});
+*/
 /*
 // funções geradoras tem o seu funcionamento adiado até ela ser chamada que vai retornando coisas ao longo da execução.
 
