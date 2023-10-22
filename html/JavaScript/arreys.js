@@ -166,7 +166,7 @@ const carros = [
   ]
 */
 
-/*
+/* // Exemplos do metodo .sort()
 const numeros = [10,1,2];
 
 console.log("\nArray antes da ordenação:\n");
