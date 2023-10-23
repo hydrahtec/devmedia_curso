@@ -188,33 +188,137 @@ fetch(`https://api.github.com/users/${userName} ` , {
     conosole.log(`Houve um erro: ${err}`);
 });
 ****
-==> Estudar sobre callback
+==> XMLHttpRequest
+*/
+//=================================================
+/*// Laços e iterações
+    
+==> for_
+==> do...while_
+==> while_
+==> label_
+==> break_
+==> continue_
+==> for...in_
+==> for...of_
+***
+function howMany(selectObject) {
+    let numeroSelecionadas = 0;
+    let musicas = [];
 
-==> 
-==> 
-==> 
-==> 
-==> 
+    for (let op of selectObject) {
+
+        if (op.selected) {
+            numeroSelecionadas++;
+            musicas.push(` ${op.innerHTML}`)
+        };
+    };
+    console.log(musicas);
+
+    return ` ${numeroSelecionadas} \n musicas escolhidas: ${musicas}.`;
+};
+
+  
+const lista = document.getElementById("tipoMusica");
+
+const btn = document.getElementById('btn');
+btn.addEventListener("click", () => {
+    alert("Total de musicas selecionadas: " + howMany(lista))
+});
+*/
+//=================================================
+/*// Funções
+
+==> Funções são blocos de construção fundamentais em JavaScript. Uma função é um procedimento de JavaScript - um conjunto de instruções que executa uma tarefa ou calcula um valor. Para usar uma função, você deve defini-la em algum lugar no escopo do qual você quiser chamá-la.
+
+==> Um método é uma função invocada por um objeto. Leia mais sobre objetos e métodos em Trabalhando com Objetos (en-US).
+
+==> fatorial
+function fatorial(n) {
+    if(n==0 || n==1) return 1;
+    else return n * fatorial(n -1);
+};
+
+console.log(fatorial(10))
+
+==> As variáveis definidas no interior de uma função não podem ser acessadas de nenhum lugar fora da função, porque a variável está definida apenas no escopo da função.
+
+==>  hacks.mozilla.org
+
+Funções pré-definidas
+JavaScript tem várias funções pré-definidas:
+
+eval()
+O método eval() execulta código JavaScript passado como uma string. Seu uso não é recomendado por que pode abrir brechas para codigos mal intencionados.
+
+uneval() Non-standard
+O método uneval() cria uma representação de string do código-fonte de um Object.
+
+isFinite()
+A função global isFinite() determina se o valor passado é um número finito. Se necessário, o parâmetro é primeiro convertido para um número.
+
+isNaN()
+A função isNaN() determina se um valor é NaN ou não. Nota: coerção dentro da função isNaN tem regras interessantes; você pode, alternativamente, querer usar Number.isNaN(), como definido no ECMAScript 6, ou você pode usar typeof para determinar se o valor não é um número.
+
+parseFloat()
+A função parseFloat() analisa um argumento do tipo string e retorna um número de ponto flutuante.
+
+parseInt()
+A função parseInt() analisa um argumento do tipo string e retorna um inteiro da base especificada (base do sistema numérico).
+
+decodeURI()
+A função decodeURI() decodifica uma Uniform Resource Identifier (URI) criada anteriormente por encodeURI ou por uma rotina similar.
+
+decodeURIComponent()
+O método decodeURIComponent() decodifica um componente Uniform Resource Identifier (URI) criado anteriormente por encodeURIComponent ou por uma rotina similar.
+
+encodeURI()
+O método encodeURI() codifica um Uniform Resource Identifier (URI), substituindo cada ocorrência de determinados caracteres por um, dois, três, ou quatro sequências de escape que representa a codificação UTF-8 do caractere (só serão quatro sequências de escape para caracteres compostos de dois caracteres "substitutos").
+
+encodeURIComponent()
+O método encodeURIComponent() codifica um componente Uniform Resource Identifier (URI), substituindo cada ocorrência de determinados caracteres por um, dois, três, ou quatro sequências de escape que representa a codificação UTF-8 do caractere (só serão quatro sequências de escape para caracteres compostos de dois caracteres "substitutos").
+
+escape() Deprecated
+O método obsoleto escape() calcula uma nova string na qual certos caracteres foram substituídos por uma sequência de escape hexadecimal. Use encodeURI ou encodeURIComponent em vez disso.
+
+unescape() Deprecated
+O método obsoleto unescape() calcula uma nova string na qual sequências de escape hexadecimais são substituídas pelo caractere que ela representa. As sequências de escape podem ser introduzidas por uma função como escape. Por unescape() estar obsoleto, use decodeURI() ou decodeURIComponent ao invés dele.
+super
 
 */
 //=================================================
+/*// expressões e operadores
 
+==> in
+O operador in retorna verdadeiro se a propriedade especificada estiver no objeto especificado. A sintaxe é:
 
+JS
+Copy to Clipboard
 
+nomePropriedadeOuNumero in nomeObjeto;
+onde nomePropriedadeOuNumero é uma string ou uma expressão numérica que representa um nome de propriedade ou um índice de um array, e nomeObjeto é o nome de um objeto.
 
+==> this (valide):
 
+==> new
 
+==> super
 
-/*//
+==> spread
 
-*/
-//=================================================
-/*//
-
-*/
-//=================================================
-/*//
-
+==> 
+==> 
+==> 
+==> 
+==> 
+==> 
+==> 
+==> 
+==> 
+==> 
+==> 
+==> 
+==> 
 */
 //=================================================
 /*//
