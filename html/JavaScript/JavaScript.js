@@ -254,10 +254,10 @@ O método eval() execulta código JavaScript passado como uma string. Seu uso n�
 uneval() Non-standard
 O método uneval() cria uma representação de string do código-fonte de um Object.
 
-isFinite()
+isFinite() retorna true or false se a variavel for ou numeor finito ou não.
 A função global isFinite() determina se o valor passado é um número finito. Se necessário, o parâmetro é primeiro convertido para um número.
 
-isNaN()
+isNaN() verifica se não é um numero .
 A função isNaN() determina se um valor é NaN ou não. Nota: coerção dentro da função isNaN tem regras interessantes; você pode, alternativamente, querer usar Number.isNaN(), como definido no ECMAScript 6, ou você pode usar typeof para determinar se o valor não é um número.
 
 parseFloat()
@@ -299,242 +299,359 @@ nomePropriedadeOuNumero in nomeObjeto;
 onde nomePropriedadeOuNumero é uma string ou uma expressão numérica que representa um nome de propriedade ou um índice de um array, e nomeObjeto é o nome de um objeto.
 
 ==> this (valide):
+faz referencia ao proprio elemento onde foi chamado.
+criando propriedades, atribuido valores a elas e invocando as mesmas para passar eses valores.
+* usar arrow functions para contornar problemas de escopo.
+(pessoa.prototype.novometodo = () => {};)
+declarar o metodo diretamento no prototype da função contrutora ou de um objeto pai de onde sairam novas instancias pode economizar uso de memoria e otimização da performace principalmente em dispositivos moveis.
 
 ==> new
+Você pode utilizar o operador new para criar uma instância de um tipo de objeto definido pelo usuário ou de um dos tipos de objeto predefinidos: Array, Boolean, Date, Function, Image, Number, Object, Option, RegExp ou String. No servidor, você pode também utilizar DbPool, Lock, File ou SendMail.
+** [... new set(number)] : cria uma arrey retirando todos os numeros ou palavras repetidas do arrei original.
 
 ==> super
+A palavra reservada super é utilizada para chamar a função pai de um objeto. dentro da instancia de u, objeto ao usar super eu defino que a função a ser usada esta dentro do elemento pai de onde foram erdadas as propriedades e metodos.
 
-==> spread
+==> spread (...) cria um arrey com mutiplas posições.
 
-==> 
-==> 
-==> 
-==> 
-==> 
-==> 
-==> 
-==> 
-==> 
-==> 
-==> 
-==> 
-==> 
-*/
-//=================================================
-/*//
+==> extends
+
+==> https://github.com/mdn/interactive-examples
 
 */
 //=================================================
-/*//
+/*// Math() classe com metodos e propriedades matematicas já pre definidos.
+
+==> abs()	Valor absoluto, tras somente o valor sem sinal.
+
+==> floor(arredonda para baixo independente do valor da casa decimal), ceil(arredonda para cima independente do valor da casa decimal)	Retorna o maior/menor inteiro que é menor/maior inteiro que ou igual ao argumento.
+
+==> min(menor valor), max(maximo valor)	Retorna menor ou maior (respectivamente) de uma lista separada por vírgula de argumentos numéricos
+
+==> random()	Retorna um número aleatório entre 0 e 1.
+
+==> round(arredonda para cima ou para baixo dependendo do seu valor), fround(), trunc(),	Funções de arredondamento e truncamento.
+
+==> pow(eleva o numero a qualquer numero)
+*/
+//=================================================
+/*//Formatando texto
+"\xA9"; // "©"
+
+==> charAt, charCodeAt, codePointAt	Retorna o código do caractere ou o caractere em uma posição específica na string.
+
+==> indexOf, lastIndexOf	Retorna a posição de uma substring específica na string ou a última posição da substring específica, respectivamente.
+
+==> startsWith, endsWith, includes
+Retorna se uma string começa, termina ou contém uma outra string específica.
+
+==> concat	Concatena o texto de duas strings e retorna uma nova string.
+
+==> fromCharCode, fromCodePoint	Cria uma string a partir de uma sequência específica de valores Unicode. Esse é um método da classe String, não de uma instância do tipo String.
+
+==> split	Separa um objeto String em um array de strings, separando a string em substrings.
+
+==> slice	Extrai uma seção de uma string e retorna uma nova string.
+
+==> substring, substr	Retorna um subconjunto específico de uma string, definindo os índices inicial e final, ou definindo um índice e um tamanho.
+
+==> match
+replace
+search
+
+"quote",
+"toLowerCase",
+"toUpperCase",
+"charCodeAt",
+"indexOf",
+"lastIndexOf",
+"trim",
+"trimLeft",
+"trimRight",
+"toLocaleLowerCase",
+"toLocaleUpperCase",
+"localeCompare",
+"match",
+"search",
+"replace",
+"split",
+*/
+//=================================================
+/*// Expressão Regular
+estudar sobre
+
+==> RegExp - O objeto RegExp é usado para corresponder texto com um padrão.
+https://www.youtube.com/watch?v=31FgxWsRRMw
+
+https://www.youtube.com/watch?v=z0EnAoH09oU
+
+(i) ignora o padrao de busca sensitive
+(g) faz uma operacao global em toda a cadeia de caracteres. seja busca ou troca.
 
 */
 //=================================================
-/*//
+/*// Arrey 
+
+==> "join",
+
+==> "reverse",
+
+==> "sort",
+
+==> "push",
+
+==> "pop",
+
+==> "shift",
+
+==> "unshift",
+
+==> "splice",
+
+==> "concat",
+
+==> "slice",
+
+==> "indexOf",
+
+==> "lastIndexOf",
+
+==> "forEach",
+
+==> "map",
+
+==> "reduce",
+
+==> "reduceRight",
+
+==> "filter",
+
+==> "some",
+
+==> "every",
+
+==> "isArray",
 
 */
 //=================================================
-/*//
+/*// Coleções chaveadas
+
+==> colecao map
 
 */
 //=================================================
-/*//
+/*// Objeto
+Em JavaScript, quase tudo é um objeto. Todos os tipos primitivos - com exceção de null e undefined - são tratados como objetos. Eles podem receber propriedades (propriedades atribuídas de alguns tipos não são persistentes), e possuem todas as características de objetos.
+
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyNames
+
+
+Constructor
+==> Object() constructor
+
+==> Object.assign()
+
+==> Methods
+
+==> Object.create()
+
+==> Object.defineProperties()
+
+==> Object.defineProperty()
+
+==> Object.entries()
+
+==> Object.freeze()
+
+==> Object.fromEntries()
+
+==> Object.getOwnPropertyDescriptor()
+
+==> Object.getOwnPropertyDescriptors()
+
+==> Object.getOwnPropertyNames()
+
+==> Object.getOwnPropertySymbols()
+
+==> Object.getPrototypeOf()
+
+==> Object.groupBy()
+
+==> Object.hasOwn()
+
+==> Object.prototype.hasOwnProperty()
+
+==> Object.is()
+
+==> Object.isExtensible()
+
+==> Object.isFrozen()
+
+==> Object.prototype.isPrototypeOf()
+
+==> Object.isSealed()
+
+==> Object.keys()
+
+==> Object.preventExtensions()
+
+==> Object.prototype.propertyIsEnumerable()
+
+==> Object.seal()
+
+==> Object.setPrototypeOf()
+
+==> Object.prototype.toLocaleString()
+
+==> Object.prototype.toString()
+
+==> Object.prototype.valueOf()
+
+==> Object.values()
 
 */
 //=================================================
-/*//
+/*// função construtora de objetos
+topico dedicado para o estudo de funcoes construtoras
+
+==> lazys
+
+==> metodos()
+
+==> this()
+
+==> getters()
+
+==> setters()
+
+==> injeção de dependencias
+
+==> feactures
+*/
+//=================================================
+/*// Classes
+https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Classes/extends
+
+==> Overview
+
+==> constructor
+
+==> extends
+
+==> Private class features
+
+==> Public class fields
+
+==> static
+
+==> heranca
+
+==> extensoes
+
+==> Static initialization blocks
 
 */
 //=================================================
-/*//
+/*// Usando promises
+Uma Promise é um objeto que representa a eventual conclusão ou falha de uma operação assíncrona. Como a maioria das pessoas consomem promises já criadas, este guia explicará o consumo de promises devolvidas antes de explicar como criá-las.
+
+==> Garantias
+
+==> Encadeamento
+
+==> Propagação de erros
+
+==> Criando uma Promise em torno de uma callback API 
+antiga
+==> Composição
+
+==> Cronometragem
+
 
 */
 //=================================================
-/*//
+/*// Arrays tipados no JavaScript
+
+==> Buffers e views: a arquitetura dos arrays tipados
+
+==> Web APIs que utilizam arrays tipados
+
+==> Exemplos
+
+==> Especificações
 
 */
 //=================================================
-/*//
+/*// Meta programação
+
+==> Proxies
+
+==> Handlers e traps
+
+==> Proxy Revogável
+
 
 */
 //=================================================
-/*//
+/*// Módulos JavaScript
+
+==> export
+
+==> import
+
+==> aside
 
 */
 //=================================================
-/*//
+/*// APIs web
 
 */
 //=================================================
-/*//
+/*// Accessibility
+https://developer.mozilla.org/pt-BR/docs/Learn/Accessibility
 
 */
 //=================================================
-/*//
+/*// Closures
+https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Closures
 
 */
 //=================================================
-/*//
+/*// Gerenciamento de Memória
+https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Memory_management
 
 */
 //=================================================
-/*//
+/*// Modelo de Concorrência e Event Loop
+
 
 */
 //=================================================
-/*//
+/*// Strict mode
+
 
 */
 //=================================================
-/*//
+/*// temporizadores
+
+==> setInterval
+
+==> setTimeout
 
 */
 //=================================================
-/*//
+/*// storage
+
+==> setstorege
+
+==> getstorage
 
 */
 //=================================================
-/*//
+/*// fech
 
 */
 //=================================================
-/*//
+/*// desestruturação
 
 */
-//=================================================
-/*//
-
-*/
-//=================================================
-/*//
-
-*/
-//=================================================
-/*//
-
-*/
-//=================================================
-/*//
-
-*/
-//=================================================
-/*//
-
-*/
-//=================================================
-/*//
-
-*/
-//=================================================
-/*//
-
-*/
-//=================================================
-/*//
-
-*/
-//=================================================
-/*//
-
-*/
-//=================================================
-/*//
-
-*/
-//=================================================
-/*//
-
-*/
-//=================================================
-/*//
-
-*/
-//=================================================
-/*//
-
-*/
-//=================================================
-/*//
-
-*/
-//=================================================
-/*//
-
-*/
-//=================================================
-/*//
-
-*/
-//=================================================
-/*//
-
-*/
-//=================================================
-/*//
-
-*/
-//=================================================
-/*//
-
-*/
-//=================================================
-/*//
-
-*/
-//=================================================
-/*//
-
-*/
-//=================================================
-/*//
-
-*/
-//=================================================
-/*//
-
-*/
-//=================================================
-/*//
-
-*/
-//=================================================
-/*//
-
-*/
-//=================================================
-/*//
-
-*/
-//=================================================
-/*//
-
-*/
-//=================================================
-/*//
-
-*/
-//=================================================
-/*//
-
-*/
-//=================================================
-/*//
-
-*/
-//=================================================
-/*//
-
-*/
-//=================================================
-/*//
-
-*/
-//=================================================
-/*//
-
-*/
-//=================================================
-
-/*//
-
-*/
-//=================================================
