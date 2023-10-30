@@ -75,4 +75,6 @@ header h1 {
     margin-bottom: 5px;
     color: rgb(8, 9, 78);
 }
-footer 
+footer p {
+    text-align: center;
+}
