@@ -1,0 +1,104 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.logo-mario {
+    width: 300px;
+}
+
+.image-mario-main {
+    height: 600px;
+}
+
+body {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100vw;
+    flex-wrap: wrap;
+}
+.container_principal {
+    width: 30%;
+    margin: 10px;
+}
+
+.video_fundo {
+    position: fixed;
+    top: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+}
+video {
+    position: fixed;
+    top: 0;
+    min-height: 100%;
+    min-width: 100%;
+}
+.mascara {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.774);
+}
+
+p {
+    color: white;
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+button {
+    height: 40px;
+    width: 200px;
+    background-color: #c51111;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+}
+.fale_conosco {
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    border-radius: 5px;
+    gap: 10px;
+    position: fixed;
+    left: -320px;
+    transition: left 1s linear;
+    z-index: 4;
+}
+.fale_conosco input {
+    height: 30px;
+    border-radius: 3px;
+    border: solid 1px grey;
+    padding-left: 10px;
+    outline-color: rgb(97, 97, 255);
+}
+.fale_conosco textarea {
+    border-radius: 3px;
+    border: solid 1px grey;
+    padding: 10px;
+    outline-color: rgb(97, 97, 255);
+}
+.fale_conosco button {
+    margin: 5px auto;
+}
+.mascara_form {
+    position: fixed;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.562);
+    height: 100vh;
+    width: 100vw;
+    visibility: hidden;
+    z-index: 3;
+}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <meta name="description" content="Pagina do mario cart">
+    <meta name="author" content="Hydrahtec">
+    <meta name="robots" content="nofollow, noindex">
+    <title>Pagina Mario</title>
+</head>
+<body>
+    <div class="video_fundo">
+        <video src="./video/video.mp4" autoplay muted></video>
+        <div class="mascara"></div>
+    </div>
+    <div class="container_principal">
+        <img src="./img/logo.png" alt="Logotipo do super mario" class="logo-mario">
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corrupti ad adipisci vero quas. Incidunt illo nihil ratione alias, blanditiis vitae. Necessitatibus eligendi similique accusantium quae deserunt quia nulla hic id!</p>
+        <button type="button" onclick="fale_conosco()">Fale conosco</button>
+    </div>
+
+    <div class="container_secundario">
+        <img src="./img/mario.png" alt="foto do mario" class="image-mario-main">
+    </div>
+
+    <form action="#" class="fale_conosco">
+        <label for="nome">Nome: </label>
+        <input type="text" id="nome" placeholder="João da Silva">
+        <label for="email">Email: </label>
+        <input type="email" id="email" placeholder="exemplo@gmail.com">
+        <label for="sugestão">Digite sua sugestão: </label>
+        <textarea name="sugestão" id="sugestão" cols="30" rows="10" placeholder="Coloque sua sugestão aqui"></textarea>
+        <button type="submit" onclick="fechaForm()">Enviar</button>
+    </form>
+    <div class="mascara_form"></div>
+    <script src="./js/script.js"></script>
+</body>
+</html>
