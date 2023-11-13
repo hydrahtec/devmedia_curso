@@ -16,7 +16,7 @@
 nav {
 	display: flex;
 	justify-content: space-between;
-	height: 50px;
+	height: 55px;
 	width: 100%;
 	align-items: center;
 	background-color: grey;
@@ -25,4 +25,17 @@ nav {
 nav a {
 	text-decoration: none;
 	color: #fff;
+	margin-right: 10px; 
+	font-size: 20px;
+}
+
+.botao {
+	background-color: blue;
+	padding: 10px;
+	border-radius: 10px;
+	margin: 15px;
+}
+
+.botao:hover {
+	padding: 12px;
 }
