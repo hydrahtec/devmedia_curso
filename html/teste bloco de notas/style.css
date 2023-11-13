@@ -1,0 +1,28 @@
+@charset "UTF-8";
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: arial, sans-serif;
+}
+
+.logo {
+	width: 150px;
+	color: #fff;
+	text-align: right;
+}
+
+nav {
+	display: flex;
+	justify-content: space-between;
+	height: 50px;
+	width: 100%;
+	align-items: center;
+	background-color: grey;
+}
+
+nav a {
+	text-decoration: none;
+	color: #fff;
+}
