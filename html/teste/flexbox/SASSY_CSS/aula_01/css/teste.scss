@@ -1,0 +1,46 @@
+@import './colors';
+@import './functions';
+* {
+   @include configdefault;
+}
+
+body {
+    @include flex_center;
+
+    width: 100%;
+    height: 100vh;
+    background-color: black;  
+}
+
+.bola01 {
+    width: 200px;
+    height: 200px;
+
+    background-color: $newred;
+    border-radius: 50%;
+
+    a {
+        font-size: 25px;
+        color: white;
+        text-decoration: none;
+        cursor: pointer;
+    }
+}
+.bola02 {
+    width: 200px;
+    height: 200px;
+    @include border(white);
+    background-color: $newblue;
+    border-radius: 50%;
+}
+.bola03 {
+    width: 200px;
+    height: 200px;
+
+    background-color: $newgreen;
+    border-radius: 50%;
+
+    &:hover {
+        background-color: yellow;
+    }
+}

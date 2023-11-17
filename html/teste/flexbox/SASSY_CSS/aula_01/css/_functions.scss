@@ -1,0 +1,17 @@
+@import './colors';
+
+@mixin flex_center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin configdefault {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@mixin border ($color) {
+    border: 3px solid $color;
+}
