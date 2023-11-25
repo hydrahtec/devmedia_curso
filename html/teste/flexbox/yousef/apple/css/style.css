@@ -3,8 +3,8 @@
 * {
     margin: 0;
     padding: 0;
-            box-sizing: border-box;
     -webkit-box-sizing: border-box;
+            box-sizing: border-box;
 }
 .nav_list_mobile {
     display: none;
@@ -62,9 +62,9 @@ a {
 }
 .nav_list_desktop {
     list-style: none;
-    display: flex;
     display: -webkit-box;
     display: -ms-flexbox;
+    display: flex;
     -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -81,8 +81,11 @@ a {
     padding: 5px 10px;
     font-size: 13px;
     opacity: 1;
-    transition: 0.5s ease;
     -webkit-transition: 0.5s ease;
+    transition: 0.5s ease;
+}
+.nav_list_mobile {
+    display: none;
 }
 .nav-link:hover {
     opacity: 0.7;
@@ -93,9 +96,9 @@ a {
     }
    .nav_mobile {
     list-style: none;
-    display: flex;
     display: -webkit-box;
     display: -ms-flexbox;
+    display: flex;
     -webkit-box-align: center;
     -ms-flex-align: center;
         align-items: center;
@@ -137,4 +140,85 @@ a {
     position: relative;
   }
   
+  .hamburguer.hamburguer-active:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 23%;
+    width: 55%;
+    height: 4%;
+    -webkit-transform: rotate(225deg);
+            transform: rotate(225deg);
+    background-color: #d6d6d6;
+  }
+  .hamburguer.hamburguer-active:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 23%;
+    width: 55%;
+    height: 4%;
+    -webkit-transform: rotate(-405deg);
+            transform: rotate(-405deg);
+    background-color: #d6d6d6;
+  }
+  .nav_list_mobile {
+    width: 100%;
+    height: 0;
+    position: fixed;
+    top: -1100%;
+    z-index: 0;
+    opacity: 0.5;
+    background-color: #030303;
+    list-style: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin: 0;
+    padding: 40px 30px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-transition: 0.85s cubic-bezier(0.25, 0.7, 0.6, 1);
+    transition: 0.85s cubic-bezier(0.25, 0.7, 0.6, 1);
+  }
+  .nav_list_mobile.active {
+    top: 0;
+    height: 100vh;
+    opacity: 1;
+  }
+  .nav_item_mobile {
+    width: 100%;
+    margin: 5px 0;
+  }
+  .nav_link_mobile {
+    display: block;
+    color: #d6d6d6;
+    width: 100%;
+    padding-top: 10px;
+    border-top: 1px solid #333;
+    font-size: 11px;
+    opacity: 1;
+    -webkit-transition: 0.5s ease;
+    transition: 0.5s ease;
+  }
+  .nav_link_mobile:hover {
+    opacity: 0.7;
+  }
+  .search {
+    width: 100%;
+    height: 25px;
+    border-radius: 5px;
+    border: 0;
+    padding: 0px 10px;
+    background-color: #1f1f1f;
+    outline: none;
+    color: #888;
+  }
 }
+
+/* IPHONE SE */
