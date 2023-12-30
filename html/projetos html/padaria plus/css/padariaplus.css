@@ -93,22 +93,17 @@ footer {
   background: #542f0c;
   color: white;
   margin-top: 15px;
-  width: 100vw;
+  width: 100%;
+  padding: 10px;
 }
-footer .secao {
-  width: 100vw;
-}
-footer .secao .contato {
+footer .contato {
   display: flex;
   flex-flow: row wrap;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   text-align: center;
-  border: 1px solid red;
   width: 100%;
-}
-footer .secao .contato div {
-  width: 300px;
+  gap: 20px;
 }
 footer h3 {
   font-size: 2.4rem;
@@ -120,9 +115,26 @@ footer p {
 }
 footer span {
   font-weight: bold;
+  color: #de8e37;
 }
 footer a {
-  color: #542f0c;
+  color: #de8e37;
   text-decoration: none;
   font-weight: bold;
+}
+footer img {
+  border-radius: 5px;
+}
+footer .horario {
+  text-decoration: underline;
+}
+
+.copy {
+  background: black;
+  color: white;
+  text-align: center;
+  padding: 10px;
+}
+.copy p {
+  font-size: 1.1rem;
 }/*# sourceMappingURL=padariaplus.css.map */

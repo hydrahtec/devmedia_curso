@@ -108,23 +108,21 @@ footer {
     background: $colordef;
     color: white;
     margin-top: 15px;
-    width: 100vw;
-    .secao {
-        width: 100vw;
+    width: 100%;
+    padding: 10px;
 
-        .contato {
-            display: flex;
-            flex-flow: row wrap;
-            justify-content: space-between;
-            align-items: center;
-            text-align: center;
-            border: 1px solid red;
-            width: 100%;
-            div {
-                width: 300px;
-            }
-        }
+    .contato {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-around;
+        align-items: center;
+        text-align: center;
+        width: 100%;
+        gap: 20px;
+
+
     }
+
     h3 {
         font-size: 2.4rem;
         margin-bottom: 10px;
@@ -137,11 +135,28 @@ footer {
 
     span {
         font-weight: bold;
+        color: #de8e37;
+
     }
 
     a {
-        color: $colordef;
+        color: #de8e37;
         text-decoration: none;
         font-weight: bold;
+    }
+    img {
+        border-radius: 5px;
+    }
+    .horario {
+        text-decoration: underline;
+    }
+}
+.copy {
+    background: black;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    p {
+        font-size: 1.1rem;
     }
 }
