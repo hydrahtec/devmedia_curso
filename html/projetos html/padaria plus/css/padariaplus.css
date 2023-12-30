@@ -13,7 +13,7 @@ body {
   font-family: Tahoma;
 }
 
-header, main, footer {
+header, main {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -89,13 +89,40 @@ main .secao-destaque img {
   text-align: center;
 }
 
+footer {
+  background: #542f0c;
+  color: white;
+  margin-top: 15px;
+  width: 100vw;
+}
+footer .secao {
+  width: 100vw;
+}
+footer .secao .contato {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  border: 1px solid red;
+  width: 100%;
+}
+footer .secao .contato div {
+  width: 300px;
+}
 footer h3 {
   font-size: 2.4rem;
   margin-bottom: 10px;
+  text-align: center;
 }
 footer p {
   line-height: 30px;
 }
 footer span {
+  font-weight: bold;
+}
+footer a {
+  color: #542f0c;
+  text-decoration: none;
   font-weight: bold;
 }/*# sourceMappingURL=padariaplus.css.map */
