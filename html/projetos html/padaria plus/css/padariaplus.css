@@ -43,6 +43,7 @@ header a {
 }
 header h1 {
   font-size: 3rem;
+  text-align: center;
   padding-top: 30px;
   margin-top: 30px;
   margin-bottom: 0px;
@@ -103,7 +104,10 @@ footer .contato {
   align-items: center;
   text-align: center;
   width: 100%;
-  gap: 20px;
+  gap: 40px;
+}
+footer div {
+  min-width: 250px;
 }
 footer h3 {
   font-size: 2.4rem;
@@ -118,9 +122,23 @@ footer span {
   color: #de8e37;
 }
 footer a {
-  color: #de8e37;
+  color: #00E676;
   text-decoration: none;
   font-weight: bold;
+  font-size: 2.2rem;
+}
+footer .btn_contato a {
+  background-color: #a0530b;
+  padding: 10px;
+  border-radius: 15px;
+  border: 2px solid #e2dcd5;
+}
+footer .btn_contato a:hover {
+  background: #e2dcd5;
+}
+footer .btn_contato .fa-square-whatsapp {
+  margin-right: 5px;
+  font-size: 25px;
 }
 footer img {
   border-radius: 5px;
