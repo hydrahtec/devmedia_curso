@@ -132,6 +132,7 @@ footer .btn_contato a {
   padding: 10px;
   border-radius: 15px;
   border: 2px solid #e2dcd5;
+  transition: 300ms ease-in-out;
 }
 footer .btn_contato a:hover {
   background: rgba(226, 220, 213, 0.5568627451);

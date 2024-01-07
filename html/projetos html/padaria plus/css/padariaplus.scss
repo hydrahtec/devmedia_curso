@@ -155,7 +155,8 @@ footer {
             padding: 10px;
             border-radius: 15px;
             border: 2px solid #e2dcd5;
-
+            transition: 300ms ease-in-out;
+            
             &:hover {
                 background: #e2dcd58e;
 
