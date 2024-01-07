@@ -128,17 +128,17 @@ footer a {
   font-size: 2.2rem;
 }
 footer .btn_contato a {
-  background-color: #a0530b;
+  background-color: #e2dcd5;
   padding: 10px;
   border-radius: 15px;
   border: 2px solid #e2dcd5;
 }
 footer .btn_contato a:hover {
-  background: #e2dcd5;
+  background: rgba(226, 220, 213, 0.5568627451);
 }
 footer .btn_contato .fa-square-whatsapp {
   margin-right: 5px;
-  font-size: 25px;
+  font-size: 30px;
 }
 footer img {
   border-radius: 5px;
@@ -155,4 +155,35 @@ footer .horario {
 }
 .copy p {
   font-size: 1.1rem;
+  margin-top: 10px;
+}
+.copy a {
+  margin: 20px;
+  font-size: 1.2rem;
+  color: white;
+  text-decoration: none;
+}
+
+.up {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  width: 30px;
+  height: 30px;
+  position: fixed;
+  bottom: 10px;
+  right: 7px;
+  border-radius: 50%;
+  font-size: 25px;
+  font-weight: 700;
+}
+.up a {
+  text-decoration: none;
+  padding: 3px;
+}
+.up .fa-circle-up {
+  color: #de8e37;
+  background-color: white;
+  border-radius: 30px;
 }/*# sourceMappingURL=padariaplus.css.map */

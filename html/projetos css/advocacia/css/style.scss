@@ -1,0 +1,138 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Fredoka', sans-serif;
+}
+html {
+    font-size: 62.5%;
+}
+.secao-topo {
+    border-bottom: 1px solid #d5d5d5;
+
+    p {
+        padding: 20px;
+        font-size: 2.2rem;
+        font-weight: bold;
+    }
+}
+.secao-largura-limitada {
+    max-width: 800px;
+    margin: 0 auto;
+}
+.secao-background-capa {
+    min-height: 500px;
+    background: url('../img/capa.jpg');
+    background-size: cover;
+}
+.secao-background-conteudo {
+    text-align: right;
+    padding: 50px 20px;
+}
+.secao-conteudo {
+    padding: 50px 20px;
+
+    h3 {
+        font-size: 2.5rem;
+    }
+
+    p {
+        font-size: 1.8rem;
+        margin: 10px 0;
+    }
+    li {
+        padding: 3px 0px;
+        margin-left: 10px;
+        font-size: 1.6rem;
+    }
+    span {
+        border-left: 1px solid;
+        padding-left: 10px;
+        font-size: 20px;
+        margin-top: px;
+    }
+}
+.ct_img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-basis: 250px;
+    flex-flow: row wrap;
+    gap: 5px;
+}
+.img-conteudo {
+    max-width: 250px;
+    max-height: 180px;
+}
+.secao-background-divisao {
+   padding: 50px 0;
+   text-align: center; 
+
+
+   background-image: url('../img/fundo.jpg');
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-attachment: fixed;
+
+   h3 {
+    font-size: 3.6rem;
+    background-color: #fff;
+    width: 200px;
+    margin: 0 auto;
+    border-radius: 20px;
+   }
+}
+footer {
+    a {
+        text-decoration: none;
+        color:#59463f;
+        font-weight: 600;    
+    }
+}
+.up {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+
+    width: 30px;
+    height: 30px;
+
+    position: fixed;
+    bottom: 10px;
+    right: 7px;
+
+
+    border-radius: 50%;
+        
+    font-size: 25px;
+    font-weight: 700;
+
+    a {
+        text-decoration: none;
+        padding: 3px;
+    }
+    .fa-circle-up {
+        color: #59463f;
+        background-color: white;
+        border-radius: 50%;
+    }
+}
+
+.copy {
+    background: black;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    p {
+        font-size: 1.1rem;
+        margin-top: 10px;
+    }
+    a {
+        margin: 20px;
+        font-size: 1.2rem;
+        color: white;
+        text-decoration: none;
+
+    }
+}

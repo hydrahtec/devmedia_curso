@@ -151,19 +151,20 @@ footer {
     }
     .btn_contato {
         a {
-            background-color: #a0530b;
+            background-color: #e2dcd5;
             padding: 10px;
             border-radius: 15px;
             border: 2px solid #e2dcd5;
 
             &:hover {
-                background: #e2dcd5;
+                background: #e2dcd58e;
 
             }
         }
         .fa-square-whatsapp {
             margin-right: 5px;
-            font-size: 25px;
+            font-size: 30px;
+            
         }
     }
     img {
@@ -180,6 +181,14 @@ footer {
     padding: 10px;
     p {
         font-size: 1.1rem;
+        margin-top: 10px;
+    }
+    a {
+        margin: 20px;
+        font-size: 1.2rem;
+        color: white;
+        text-decoration: none;
+
     }
 }
 
@@ -207,6 +216,8 @@ footer {
         padding: 3px;
     }
     .fa-circle-up {
-        color: $azulEscuro;
+        color: #de8e37;
+        background-color: white;
+        border-radius: 30px;
     }
 }
