@@ -2,18 +2,14 @@
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8">
-<<<<<<< HEAD
   <meta name="viewport" content="width=device-width" initial-scale="1.0">
   <meta name="author" content="hydrahtec">
-  <meta name="description" content="Portfolio de projetos desenvolvidos por hydratec">
-  <meta name="keywords" content="portifolio eliel silva, portifolio hydrahtec, hydrahtec, projetos hydratec, html5, css3, javascript, criação de sites, programador, sites para empresas, sites para pequenos negocios">
+  <meta name="description" content="Pagina da agencia de carros Alucar aluguel de carros">
+  <meta name="keywords" content="aluguel de carros, agencia de carros, alugar carro barato, alugar carro campinas">
   <meta name="robots" content="noindex, follow">
-  <link rel="stylesheet" href="alucar.css">
-=======
-<meta name="viewport" content="width=device-width" initial-scale="1.0">
-<link rel="stylesheet" href="./css/style.css">
-<script src="https://kit.fontawesome.com/bd07864366.js" crossorigin="anonymous"></script>
->>>>>>> a18cea83bbade81c78e28a70fbf957bc3bd55522
+  <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="./css/style.css">
+  <script src="https://kit.fontawesome.com/bd07864366.js" crossorigin="anonymous"></script>
   <title>AluCar - Aluguel de Carros</title>
 </head>
 <body>
@@ -33,9 +29,9 @@
   <section class="secao-largura-limitada secao-conteudo">
     <h3>Sobre nós</h3>
     <p>Há 45 anos atuando na área de locação de veículos com segurança e garantia de satisfação. Temos os melhores preços e modelos do mercado.</p>
-    <img class="img-conteudo" src="img/img1.jpg" alt="Imagem 1">
-    <img class="img-conteudo" src="img/img2.jpg" alt="Imagem 2">
-    <img class="img-conteudo" src="img/img3.jpg" alt="Imagem 3">
+    <img class="img-conteudo" src="./img/img1.jpg" alt="Imagem 1">
+    <img class="img-conteudo" src="./img/img2.jpg" alt="Imagem 2">
+    <img class="img-conteudo" src="./img/img3.jpg" alt="Imagem 3">
     <p><span>O compromisso da AluCar é com a qualidade.</span></p>
     <p><span>Os melhores carros estão aqui!</span></p>
     <p><span>Assistência 24hrs.</span></p>
@@ -46,41 +42,41 @@
   </div>
 
   <main>
-    <section class="secao-largura-limitada secao-conteudo">
+    <section class="secao-largura-limitada secao-conteudo contato">
       <h3>Análise de cadastro</h3>
       <p>Preencha os campos abaixo e analisaremos seus dados.<br>Se tudo estiver correto ligaremos para marcar uma visita sua à loja.</p>
-      <form method="post" action="https://www.devmedia.com.br/codigos/formularios/aula9/">
+      <form name="form_alucar" class="form_alucar" method="post" action="#">
         <fieldset>
           <legend>Dados pessoais</legend>
           <div class="grupo-campo">
-            <label>Nome</label>
-            <input type="text" name="nome" placeholder="digite seu nome" required>
+            <label for="nome">Nome</label>
+            <input type="text" name="nome" id="nome" placeholder="digite seu nome" required>
           </div>
           <div class="grupo-campo">
-            <label>Data de Nascimento</label>
-            <input type="date" name="data_nascimento" placeholder="Data de nascimento" required>
+            <label for="data_nascimento">Data de Nascimento</label>
+            <input type="date" id="data_nascimento" name="data_nascimento" placeholder="Data de nascimento" required>
           </div>
           <div class="grupo-campo">
-            <label>Telefone</label>
-            <input type="tel" name="telefone" placeholder="(XX) XXXXX-XXXX" required>
+            <label for="telenone">Telefone</label>
+            <input type="tel" id="telenone" name="telefone" placeholder="(XX) XXXXX-XXXX" required>
           </div>
         </fieldset>
         <fieldset>
           <legend>CNH</legend>
           <div class="grupo-campo">
-            <label>Número do Registro</label>
-            <input type="number" name="numero_registro" placeholder="informe o número da sua CNH" required>
+            <label for="numero_registro">Número do Registro</label>
+            <input type="number" id="numero_registro" name="numero_registro" placeholder="informe o número da sua CNH" required>
           </div>
           <div class="grupo-campo">
-            <label>Validade</label>
-            <input type="date" name="validade" placeholder="validade" required>
+            <label for="validade">Validade</label>
+            <input type="date" id="validade" name="validade" placeholder="validade" required>
           </div>
         </fieldset>
         <fieldset>
           <legend>Carro</legend>
           <div class="grupo-campo">
-            <label>Modelo do Carro</label>
-            <select name="carro" title="carros" required>
+            <label for="carro">Modelo do Carro</label>
+            <select name="carro" id="carro" title="carros" required>
               <option value="">Escolha um carro</option>
               <optgroup label="Volkswagem">
                 <option value="gol">Gol</option>
@@ -104,13 +100,17 @@
       </form>
     </section>
   </main>
+
   <footer>
-    <p>Copyright 2022 - AluCar</p>
+    <div class="copy">
+      <p>Desenvolvido por Hydrah Tecnologia</p>
+      <p> &#9400 - Todos os Direitos Reservados - 2024</p>
+    </div>
   </footer>
 
   <div class="up">
-    <a href="#home" title="Subir"><i class="fa-regular fa-circle-up"></i></a>
-</div>
+    <a href="#" title="Subir"><i class="fa-regular fa-circle-up"></i></a>
+  </div>
 
 </body>
 </html>
