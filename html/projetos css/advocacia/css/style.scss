@@ -136,3 +136,44 @@ footer {
 
     }
 }
+.lgpd {
+    position: fixed;
+     left: 20px;
+     right: 20px;
+     bottom: 20px;
+ 
+     padding: 20px;
+     background-color: #5180e0;
+     color: white;
+     font-size: 15px;
+ 
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+ 
+     border-radius: 10px;
+ 
+     
+}
+.lgpd h2 {
+    color: white;
+    font-size: 18px;
+}
+.lgpd a {
+    color: white;
+}
+.lgpd button {
+    background-color: #04a600;
+    border: 2px solid #035254;
+    color: white;
+    cursor: pointer;
+    padding: 10px 30px;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: bold;
+    transition: 300ms ease-in-out;
+    margin-left: 5px;
+}
+.lgpd button:hover {
+    background-color: #035254;
+}
