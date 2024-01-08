@@ -222,3 +222,44 @@ footer {
         border-radius: 30px;
     }
 }
+
+.lgpd {
+    position: fixed;
+     left: 20px;
+     right: 20px;
+     bottom: 20px;
+ 
+     padding: 20px;
+     background-color: #5180e0;
+     color: white;
+     font-size: 1.5rem;
+ 
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+ 
+     border-radius: 10px;
+ 
+     h2 {
+         color: white;
+     }
+     a {
+         color: white;
+     }
+     button {
+         background-color: #04a600;
+         border: 2px solid #035254;
+         color: white;
+         cursor: pointer;
+         padding: 10px 30px;
+         border-radius: 10px;
+         font-size: 1.6rem;
+         font-weight: bold;
+         transition: 300ms ease-in-out;
+ 
+         &:hover {
+             background-color: #035254;
+         }
+     }
+ 
+ }
