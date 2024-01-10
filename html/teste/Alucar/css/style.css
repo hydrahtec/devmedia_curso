@@ -177,6 +177,49 @@ p {
     text-decoration: none;
 }
 
+.tks_contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #ecedef;
+  color: black;
+  width: 100vw;
+  height: 100vh;
+}
+.tks_contact div {
+    width: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+
+  }
+.tks_contact h1 {
+    font-size: 3rem;
+    color: black;
+}
+.tks_contact p {
+    font-size: 2rem;
+}
+.tks_contact .voltar {
+        background-color: #f5c18b;
+        color: #499c97;
+        border: none;
+        font-size: 2.2rem;
+        font-weight: 600;
+        padding: 5px 20px;
+        border: none;
+        border-radius: 5px;
+        border-bottom: 2px solid #c46e52;
+        border-right: 2px solid #c46e52;
+        cursor: pointer;
+}
+.tks_contact .voltar:hover {
+  color: #ecedef;
+  background-color: #c46e52;
+}
+
 .lgpd {
   position: fixed;
    left: 20px;
