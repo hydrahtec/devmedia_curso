@@ -28,7 +28,23 @@ html {
   background: url("../img/capa.jpg");
   background-size: cover;
 }
+.secao-background-capa h1 {
+  font-size: 4rem;
+}
+.secao-background-capa h2 {
+  font-size: 2.5rem;
+}
 
+@media (max-width: 600px) {
+  .secao-background-capa h1 {
+    font-size: 3rem;
+    background-color: rgba(255, 255, 255, 0.137);
+  }
+  .secao-background-capa h2 {
+    font-size: 2rem;
+    background-color: rgba(255, 255, 255, 0.137);
+  }
+}
 .secao-background-conteudo {
   text-align: right;
   padding: 50px 20px;
