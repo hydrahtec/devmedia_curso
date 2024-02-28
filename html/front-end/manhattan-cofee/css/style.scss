@@ -1,13 +1,13 @@
-$fonte-fran: 'Fraunces', serif;
+$fonte-primary: 'Fraunces', serif;
 $fonte-lato: 'Lato', sans-serif;
-$fonte-osw: 'Oswald', sans-serif;
+$fonte-link: 'Oswald', sans-serif;
 
-$color-ma: #c4a47c;
-$color02: #fff;
-$color04: #000000;
-$color05: #604829;
-$color06: #666;
-$color06: #ACACAC;
+$color-amarelo-escuro: #c4a47c;
+$color-white: #fff;
+$colorblack: #000000;
+$color-bege: #604829;
+$color-cinza-escuro: #666;
+$color-cinza-claro: #ACACAC;
 
 /* Efeitos Globais */
 * {
@@ -31,5 +31,71 @@ $color06: #ACACAC;
 nav {
     width: 100%;
     position: fixed;
-    background-color: ;
+    background-color: $color-bege;
+    z-index: 1;
+
+    img {
+        width: 100px;
+        position: relative;
+        left: 15%;
+    }
+
+    div {
+        position: absolute;
+        top: 35%;
+        right: 15%;
+
+        a {
+            margin-right: 20px;
+            font-size: 18px;
+            font-family: $fonte-link;
+            font-weight: 700;
+            text-decoration: none;
+            text-shadow: 3px 5px 2px #000000;
+            letter-spacing: 2px;
+            color: $color-amarelo-escuro;
+        }
+    }
+    
 }
+
+/* Container Parallax 1 */
+.container-parallax1 {
+    height: 100vh;
+    background-image: url('../assets/parallax-imagem1.png');
+
+    h1 {
+        color: $color-white;
+        position: absolute;
+        top: 45%;
+        right: 0;
+        left: 0;
+        text-align: center;
+        font-weight: 400;
+        font-family: $fonte-primary;
+        font-size: 90px;
+    }
+}
+
+/* Container Parallax 2 */
+.container-parallax2 {
+    height: 50vh;
+    background-image: url('../assets/parallax-imagem2.jpg');    
+}
+.container-parallax2,
+.container-parallax3 {
+    h3 {
+        width: 500px;
+        padding: 10px;
+
+        position: relative;
+        top: 45%;
+        right: 0;
+        left: 0;
+        margin: auto;
+        
+        font-size: 24px;
+    }
+}
+
+/* Container Parallax 3 */
