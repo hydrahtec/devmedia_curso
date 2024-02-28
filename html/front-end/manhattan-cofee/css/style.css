@@ -1,1 +1,25 @@
-/*# sourceMappingURL=style.css.map */
+@charset "UTF-8";
+/* Efeitos Globais */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container-parallax1,
+.container-parallax2,
+.container-parallax3,
+.container-parallax4,
+.container-parallax5 {
+  position: relative;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+/* Topo da página */
+nav {
+  width: 100%;
+  position: fixed;
+  background-color: #604829;
+}/*# sourceMappingURL=style.css.map */
