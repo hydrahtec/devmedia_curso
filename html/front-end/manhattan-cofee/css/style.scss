@@ -4,7 +4,7 @@ $fonte-link: 'Oswald', sans-serif;
 
 $color-amarelo-escuro: #c4a47c;
 $color-white: #fff;
-$colorblack: #000000;
+$color-black: #000000;
 $color-bege: #604829;
 $color-cinza-escuro: #666;
 $color-cinza-claro: #ACACAC;
@@ -95,7 +95,76 @@ nav {
         margin: auto;
         
         font-size: 24px;
+        font-weight: 400;
+        font-style: italic;
+        font-family: $fonte-primary;
+        text-align: center;
+
+        letter-spacing: 2px;
+        background-color: $color-bege;
+        color: $color-white;
+
+        border-radius: 5px;
     }
 }
 
 /* Container Parallax 3 */
+.container-parallax3 {
+    height: 55vh;
+    background-image: url('../assets/parallax-imagem3.jpg');
+}
+
+/* Container Parallax 4 */
+.container-parallax4 {
+    height: 100vh;
+    background-image: url('../assets/parallax-imagem4.png');
+
+    h2 {
+        width: 500px;
+        padding: 10px;
+        position: relative;
+        top: 10%;
+        right: 0;
+        left: 0;
+        margin: auto;
+        font-size: 24px;
+        font-family: $fonte-link;
+        letter-spacing: 5px;
+        text-align: center;
+        background-color: $color-bege;
+        border-radius: 5px;
+        color: $color-white;
+    }
+
+    iframe {
+        position: absolute;
+        top: 23%;
+        left: 0;
+        right: 0;
+        margin: auto;
+    }
+
+    .container-contatos {
+        position: absolute;
+        bottom: 8%;
+        right: 0;
+        left: 0;
+
+        width: 500px;
+        padding: 10px;
+        margin: auto;
+        background-color: $color-bege;
+
+        border-radius: 5px;
+
+        p {
+            color: $color-white;
+            font-family: $fonte-lato;
+            line-height: 36px;
+            text-shadow: 0px 6px 8px $color-black;
+            text-align: center
+        }
+    }
+}
+
+/* Efeitos aplicados a classe container-texto */
