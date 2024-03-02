@@ -141,4 +141,116 @@ nav div a {
   text-align: center;
 }
 
-/* Efeitos aplicados a classe container-texto *//*# sourceMappingURL=style.css.map */
+/* Efeitos aplicados a classe container-texto */
+.container-texto {
+  padding: 80px 0px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 34px;
+  letter-spacing: 1px;
+  text-align: center;
+  color: #666;
+}
+.container-texto h2 {
+  margin-bottom: 30px;
+  font-size: 24px;
+  letter-spacing: 2px;
+  font-family: "Oswald", sans-serif;
+  color: #c4a47c;
+}
+.container-texto p {
+  max-width: 1024px;
+  padding: 0px 20px;
+  margin: 0 auto;
+  font-family: "Lato", sans-serif;
+  line-height: 34px;
+  letter-spacing: 1px;
+  color: #666;
+}
+
+/* Container Parallax 5 */
+.container-parallax5 {
+  height: 85vh;
+  background-image: url("../assets/cafeteria.jpg");
+}
+.container-parallax5 h2 {
+  position: absolute;
+  margin: 0 auto;
+  color: #fff;
+  top: 20%;
+  right: 0;
+  left: 0;
+  text-align: center;
+  font-family: "Oswald", sans-serif;
+  letter-spacing: 8px;
+}
+
+.lista-horarios {
+  max-width: 768px;
+  position: absolute;
+  bottom: 20%;
+  right: 0;
+  left: 0;
+  margin: 0 auto;
+  list-style: none;
+  font-family: "Oswald", sans-serif;
+}
+.lista-horarios li {
+  position: relative;
+}
+.lista-horarios li h3 {
+  color: #fff;
+  margin-bottom: 10px;
+}
+.lista-horarios li div {
+  width: 70%;
+  height: 1px;
+  position: absolute;
+  margin: 0 auto;
+  background-color: #ACACAC;
+  top: 50%;
+  right: 0;
+  left: 0;
+}
+.lista-horarios li p, .lista-horarios li .texto-marrom {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-weight: 700;
+  font-family: "Oswald", sans-serif;
+}
+.lista-horarios li p {
+  color: #ACACAC;
+}
+.lista-horarios li .texto-marrom {
+  color: #c4a47c;
+}
+
+/* Rodapé */
+.container-rodape {
+  position: relative;
+  padding: 20px 0;
+  line-height: 34px;
+  letter-spacing: 2px;
+  font-weight: 600;
+  font-family: "Lato", sans-serif;
+  text-align: center;
+  background-color: #000000;
+  color: #fff;
+}
+.container-rodape span {
+  color: #c4a47c;
+}
+.container-rodape a {
+  display: inline-block;
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  bottom: 80px;
+  right: 50px;
+  background-image: url("../assets/seta-para-cima.png");
+  background-position: center;
+  background-size: cover;
+  background-color: #c4a47c;
+  border-radius: 4px;
+}/*# sourceMappingURL=style.css.map */
