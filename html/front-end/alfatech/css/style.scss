@@ -13,6 +13,9 @@ $cinzaES: #233032;
     margin: 0 auto;
 }
 
+body {
+    padding: 0 3px;
+}
 /*topo da página*/
 
 .container-topo {
@@ -135,3 +138,197 @@ $cinzaES: #233032;
 }
 
 /* Seção Informações */
+.secao-informacoes {
+    padding: 100px 0;
+    text-align: center;
+
+    h2 {
+        max-width: 900px;
+        font-size: 32px;
+        margin: 0px auto 60px;
+
+
+        span {
+            color: #2f86d6;
+        }
+    }
+}
+
+.container-informacoes {
+    position: relative;
+    height: 240px;
+
+    div {
+        width: 33%;
+        position: absolute;
+        top: 0;
+
+        img {
+            width: 100px;
+        }
+
+        h3 {
+            margin: 20px;
+        }
+    }
+
+    .card2 {
+        left: 343px;
+    }
+
+    .card3 {
+        right: 0;
+    }
+
+}
+
+
+/* Seção Planos */
+.secao-planos {
+    padding: 100px o;
+    background-color: #f1f3f7;
+
+    h2 {
+        text-align: center;
+        margin-bottom: 70px;
+        font-size: 32px;
+
+        span {
+            color: #2f86d6;
+        }
+    }
+}
+
+table {
+    border-radius: 4px;
+    margin: auto;
+    box-shadow: 0px 2px 40px 15px rgba(47,134,214,1);
+
+    thead {
+        th {
+            text-align: center;
+            padding: 20px 0;
+            background-color: #fff;
+
+            h3 {
+                margin-bottom: 20px;
+            }
+
+            img {
+                width: 100px;
+                margin: auto;
+            }
+
+            p {
+                max-width: 150px;
+                margin: auto;
+                padding-top: 10px;
+                font-size: 13;
+                font-weight: 500;
+                color: #a89f9f;
+            }
+        }
+    }
+
+    tbody {
+        td {
+            width: 250px;
+            max-width: 1024px;
+            text-align: center;
+            font-weight: 500;
+            padding: 15px;
+        }
+    }
+}
+
+.linha-impar {
+    background-color: #f6f6f6;
+}
+
+.linha-par {
+    background-color: #fff;
+}
+
+/* Seção Segundo Anúncio */
+.secao-segundo-anuncio {
+    background-color: #2f86d6;
+}
+
+.container-segundo-anuncio {
+    position: relative;
+    padding: 40px 0;
+
+    h2 {
+        color: #fff;
+        width: 550px
+    }
+
+    a {
+        position: absolute;
+        top: 40px;
+        right: 0;
+        font-size: 18px;
+        font-weight: 700px;
+        padding: 20px;
+        border-radius: 4px;
+        text-decoration: none;
+        text-align: center;
+        background-color: #233032;
+        color: fff;
+        cursor: pointer;
+
+        img {
+            position: absolute;
+            top: 25px;
+            left: 0;
+            width: 20px;
+            margin-left: 20px;
+        }
+
+        span {
+            margin-left: 30px;
+        }
+    }
+}
+
+/* Rodapé */
+.rodape-logo {
+    width: 320px;
+    position: relative;
+    margin: 70px auto 40px;
+
+    img {
+        width: 80px;
+    }
+
+    div {
+        position: absolute;
+        left: 95px;
+        top: 0;
+    }
+
+    p {
+        color: #2f86d6;
+        font-weight: 600;
+    }
+}
+
+.container-contatos {
+    text-align: center;
+    margin-bottom: 50px;
+    line-height: 40px;
+    font-size: 16px;
+    font-weight: 600;
+}
+.container-copyright {
+    font-size: 15px;
+    font-weight: 600;
+    text-align: center;
+    padding: 10px 0px;
+    background-color: #f1f3f7;
+
+    span {
+        color: #2f86d6;
+    }
+}
+
