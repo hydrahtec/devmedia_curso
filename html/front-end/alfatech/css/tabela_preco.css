@@ -1,0 +1,56 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.limitar-secao {
+    width: 100%;
+    max-width: 1024px;
+    margin: 0 auto;
+}
+
+.topo {
+    background-color: #2f86d6;
+}
+
+.container-topo {
+    position: relative;
+    padding: 35px o;
+}
+
+.topo-logo {
+    position: relative;
+
+    img {
+        width: 80px;
+    }
+
+    div {
+        position: absolute;
+        top: 0;
+        left: 95px;
+    }
+}
+
+.topo-links {
+    position: absolute;
+    top: 35px;
+    right: 0;
+
+    a {
+        font-size: 18px;
+        padding: 10px;
+        text-decoration: none;
+        font-weight: 600;
+        color: #fff;  
+    }
+}
+
+.topo-logo {
+    p {
+        color: #fff;
+        font-weight: 600;
+    }
+}
