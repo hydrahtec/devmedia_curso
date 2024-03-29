@@ -56,12 +56,12 @@
 }
 
 /* Seção conteúdo principal */
+main {
+    border: 1px solid red;
+}
 .conteudo-principal {
+    max-width: 1024px;
     padding: 100px 0;
-
-    table {
-        margin: auto;
-    }
 }
 
 .celula-escondida {
@@ -70,7 +70,7 @@
 
 .celula-cabecalho {
     text-align: center;
-    padding: 20px 40px;
+    padding: 10px 20px;
     border-bottom: 1px solid #f1f3f7;
     border-right: 1px solid #f1f3f7;
     background-color: #f1f3f7;
@@ -87,6 +87,8 @@
 }
 
 table {
+    margin: auto;
+
     tbody {
         td {
             text-align: center;
