@@ -1,5 +1,5 @@
 import Head from "next/head";
-import styles from "@/styles/Home.module.css";
+import style from "@/styles/Home.module.css";
 
 import { Topo } from "./componentes/Topo";
 import { Card } from "./componentes/Card";
@@ -15,7 +15,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Topo />
-      <main className={`${styles}`}>
+      <main className={style.secao_cards}>
         <Card />
         <Card />
         <Card />
