@@ -1,13 +1,13 @@
-import { useState } from 'react'
+import React, { useState } from 'react'
 import style from './PaginaInicial.module.css'
 
 export const PaginaInicla = () => {
     let [numeroAleatorio, SetNumeroAleatorio] = useState(0);
 
     function gerarNumero () {
-        let geranumero = Math.floor(Math.random * 100);
+        let geranumero = Math.floor(Math.random() * (100-1) + 1);
 
-        SetNumeroAleatorio = geranumero;
+        SetNumeroAleatorio(geranumero);
     }
 
     return (
