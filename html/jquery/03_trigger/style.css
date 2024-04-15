@@ -1,0 +1,15 @@
+body {
+    display: flex;
+    justify-content: space-around;
+}
+
+#bloco1 {
+    width: 200px;
+    height: 200px;
+    background: #000;
+}
+#bloco2 {
+    width: 200px;
+    height: 200px;
+    background: red;
+}
