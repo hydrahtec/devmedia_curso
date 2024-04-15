@@ -22,7 +22,7 @@ $('#btn_somarjq').click(() => {
     let v1 = parseInt($('#v1').val());
     let v2 = parseInt($('#v2').val());
     let soma = v1 + v2;
-    let res = $('#res').val(soma); 
+    $('#res').val(soma); 
 });
 
 $('#limpar').click(() => {
