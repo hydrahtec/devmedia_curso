@@ -1,0 +1,11 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@import './mod.menu';
+@import './mod.header';
+@import './mod.main';
+@import './mod.aside';
+@import './mod.footer';
