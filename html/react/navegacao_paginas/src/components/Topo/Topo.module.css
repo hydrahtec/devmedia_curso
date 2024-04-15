@@ -1,0 +1,8 @@
+.topo {
+    display: flex;
+    justify-content: space-between;
+}
+
+.image {
+    width: 20%;
+}
