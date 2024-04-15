@@ -1,0 +1,49 @@
+.secao {
+    max-width: 600px;
+    background: rgb(249, 241, 241);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    gap: 30px;
+}
+
+.bg_vermelho, .bg_azul {
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+}
+
+.bg_vermelho {
+    background: red;
+}
+
+.bg_azul {
+    background: blue;
+}
+
+.conteudo {
+    text-align: center;
+
+}
+
+.conteudo p {
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+.botao {
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px;
+    transition: ease-in-out 0.2s;
+ 
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.botao:hover {
+    box-shadow: 2px 2px 5px;
+}
