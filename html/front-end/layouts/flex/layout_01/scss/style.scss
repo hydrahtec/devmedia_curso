@@ -3,9 +3,24 @@
     padding: 0;
     box-sizing: border-box;
 }
+body {
+    display: flex;
+    margin: 3px;
+    flex-wrap: wrap;
+    flex: 1 1 100vw;
 
+}
+nav, header, main, aside, footer {
+    display: flex;
+    margin: 3px;
+    flex: 1 1 100vw;
+    background: #a1a1a1;
+
+}
 @import './mod.menu';
 @import './mod.header';
 @import './mod.main';
 @import './mod.aside';
 @import './mod.footer';
+
+
