@@ -12,3 +12,10 @@ $(document).mousemove((event) => {
     $('#text').text(`A posição do x é: ${pmx} px 
     e a posição do y é: ${pmy} px`);
 });
+
+$(document).click((event) => {
+    $('#res').text(`O item clicado foi: ${event.target.tagName}`);
+    if (event.target.id == "res") {
+        alert('Não pode ser clicado!')
+    };
+});
