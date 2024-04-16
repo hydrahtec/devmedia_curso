@@ -1,0 +1,19 @@
+header {
+    flex: 1 1 100vw;
+    height: 100px;
+
+    #logo {
+        flex: 0 1 200px;
+        background-color: #c9c9c9;
+    }
+
+    #openMenu, #closeMenu {
+        border: none;
+        background: none;
+        font-size: 30px;
+        font-weight: bold;
+        margin: 0 5px 0 5px;
+        cursor: pointer;
+        display: none;
+    }
+}

@@ -1,0 +1,67 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    display: flex;
+    margin: 3px;
+    flex-wrap: wrap;
+    flex: 1 1 100vw;
+
+}
+nav, header, main, aside, footer {
+    display: flex;
+    margin: 3px;
+    background: #a1a1a1;
+
+}
+@import './mod.menu';
+@import './mod.header';
+@import './mod.main';
+@import './mod.aside';
+@import './mod.footer';
+
+
+@media only screen and (max-width: 923px) {
+    main {
+        height: calc(100vh - 330px);
+    }
+
+    aside {
+        flex: 1 1 100vw;
+    }
+}
+
+@media only screen and (max-width: 717px) {
+    header {
+        #openMenu, #closeMenu {
+            display: block;
+        }
+
+        #closeMenu {
+            position: fixed;
+            top: 15px;
+            right: 15px;
+        }
+        #openMenu {
+            margin-left: auto; // utilizara toda a margem a esquerda que ate ocupar todo espaço disponivel. jogando o menu para a direita.
+        }
+    }
+
+    nav{
+        position: fixed;
+        flex-direction: column;
+        width: 100vw;
+        height: 100vh;
+        background: rgba(255,255,255,0.8);
+        text-align: center;
+        justify-content: center;
+        margin: 0;
+        display: none;
+        opacity: 0;
+        transition: 0.9s ease-in-out;
+
+    }
+    
+}
