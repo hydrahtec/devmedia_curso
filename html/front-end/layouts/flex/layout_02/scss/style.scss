@@ -22,4 +22,22 @@ nav, header, main, aside, footer {
 @import './mod.aside';
 @import './mod.footer';
 
+@media only screen and (max-width: 923px) {
+    main {
+        height: calc(100vh - 330px);
+    }
 
+    aside {
+        flex: 1 1 100vw;
+    }
+}
+
+@media only screen and (max-width: 717px) {
+    nav {
+        height: 100px;
+    }
+
+    main {
+        height: calc(100vh - 436px);
+    }
+}
