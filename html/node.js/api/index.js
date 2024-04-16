@@ -2,7 +2,9 @@ const express = require('express');
 const app = express();
 
 app.get('/', (req, res) => {
-    res.send('Hellow word, primeira API com expres!!');
+    let mensagem = {mensagem: 'Hellow word, primeira API com expres!!'};
+
+    res.json(mensagem);
 });
 
 app.listen(8080, () => {
