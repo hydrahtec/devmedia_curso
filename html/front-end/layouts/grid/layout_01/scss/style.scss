@@ -1,0 +1,18 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 1.2rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    text-align: center;
+    margin: 20px 0
+}
+
+@import './mod.menu';
+@import './mod.header';
+@import './mod.main';
+@import './mod.aside';
+@import './mod.footer';
