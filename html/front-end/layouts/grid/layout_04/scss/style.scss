@@ -1,0 +1,40 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.wraper {
+    display: grid;
+    gap: .5rem;
+    grid-template-columns: 1fr;
+    height: 100vh;
+    margin: 0 auto;
+    grid-template-areas: 
+        "cabecalho"
+        "main"
+        "aside"
+        "aside_main"
+        "aside_sec"
+        "rodape"
+    ;
+
+    @media (min-width: 48em) { // width > 768px
+            grid-template-columns: 1fr repeat(4, minmax(auto, 200px)) 1fr;
+            grid-template-rows: .5fr 2fr .5fr .5fr;
+            grid-template-areas: 
+                "cabecalho  cabecalho   cabecalho   cabecalho   cabecalho   cabecalho"
+                ".          main        main        main        aside       .       "
+                ".          aside_main  aside_main  aside_sec  aside_sec    .       "
+                "rodape     rodape      rodape      rodape      rodape      rodape" 
+            ;
+    
+    }
+}
+
+@import './mod.menu';
+@import './mod.header';
+@import './mod.main';
+@import './mod.aside';
+@import './mod.footer';
+
