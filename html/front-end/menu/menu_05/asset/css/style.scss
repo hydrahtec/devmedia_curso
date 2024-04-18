@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html {
+    height: 200vh;
+}
+
+header {
+    width: 100%;
+    padding: 60px 4%;
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    transition: 1s;
+
+    .container {
+        max-width: 1280px;
+        margin: 0 auto;
+    }
+    .flex {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    i {
+      font-size: 30px;
+      color: #fff;  
+    }
+    ul {
+        list-style-type: none;
+
+        li {
+            display: inline-block;
+            margin: 0 40px;
+
+            a {
+                color: #fff;
+                text-decoration: none;
+            }
+        }
+    }
+    .btn_contato {
+        button {
+            width: 120px;
+            height: 40px;
+            border: 0;
+            background-color: #fe775a;
+            color: #fff;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: 0.2s;
+        }
+
+    }
+    &.rolagem {
+        background-color: #fff;
+        padding: 20px 4%;
+
+        ul {
+            li {
+                a {
+                    color: #fe775a;
+                }
+            }
+        }
+
+        i {
+            color: #fe775a;  
+        }
+
+    }
+}
+.banner {
+    height: 100vh;
+    background-image: url('https://picsum.photos/1200/1200');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    h1 {
+        font-size: 4em;
+
+        span {
+            color: #FFAE81;
+        }
+    }
+}
