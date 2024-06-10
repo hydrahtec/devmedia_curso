@@ -37,7 +37,7 @@ const saveTodo = (text, done = 0, save = 1) => {
 
     //utilizando dados da localStorage
     if (done) {
-        todo.classList("done");
+        todo.classList.add("done");
     };
 
     if (save) {
@@ -49,7 +49,9 @@ const saveTodo = (text, done = 0, save = 1) => {
     todoInput.value = "";
 };
 
-const toggleForms = () => {};
+const toggleForms = () => {
+    
+};
 
 const updateTodo = (text) => {};
 
