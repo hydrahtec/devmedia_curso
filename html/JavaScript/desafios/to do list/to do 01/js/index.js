@@ -50,7 +50,9 @@ const saveTodo = (text, done = 0, save = 1) => {
 };
 
 const toggleForms = () => {
-    
+    editForm.classList.toggle("hide");
+    todoForm.classList.toggle("hide");
+    todoList.classList.toggle("hide");
 };
 
 const updateTodo = (text) => {};
