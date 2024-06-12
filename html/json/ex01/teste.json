@@ -1,0 +1,19 @@
+[
+    
+    {
+        "pessoa": [
+            {
+            "nome": "João da silva",
+            "idade": "23",
+            "profissão": "mecanico",
+            "salario": "R$ 2000.00"
+            },
+            {
+                "nome": "João da silva",
+                "idade": "23",
+                "profissão": "mecanico",
+                "salario": "R$ 2000.00"
+            }
+        ]
+    }
+]
