@@ -1,0 +1,27 @@
+@keyframes animacao {
+    0% {background-color: white;
+        width: 500px;
+    }
+    50% {background-color: blue;
+        width: 250px;
+    }
+    100% {background-color: white;
+        width: 0px;
+    }
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container {
+    background-color: purple;
+    width: 500px;
+    height: 10px;
+    animation-name: animacao;
+    animation-duration: 6s;
+    animation-delay: 2s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: reverse;
+}
