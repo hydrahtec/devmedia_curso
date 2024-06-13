@@ -86,4 +86,46 @@ const getSearchedTodos = (search) => {
     });
 };
 
-const filterTodos = (filterValue) => {};
+const filterTodos = (filterValue) => {
+    const todos = document.querySelectorAll(".todo");
+
+    switch (filterValeu) {
+        case "all":
+            todos.forEach((todo) => {todo.style.display = "flex"});// parenteses?
+
+            break;
+        
+            case "done":
+            todos.forEach((todo) => {
+                todo.classList.contains("done") 
+                ? todo.style.display = "flex" 
+                : todo.style.display = "none"
+            });
+
+            break;
+
+        case "todo":
+            todos.forEach((todo) => {
+                !todo.classList.contains("done")
+                ? todo.style.display = "flex"
+                : todo.style.display = "none"
+            });
+
+            break;
+
+        default:
+            break;
+    }
+};
+
+// Eventos
+todoForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    const inputValue = todoInput.value;
+
+    if (inputValue) {
+        saveTodo(inputValue);
+    };
+});
+
