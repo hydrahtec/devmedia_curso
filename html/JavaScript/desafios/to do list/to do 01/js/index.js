@@ -95,12 +95,12 @@ const filterTodos = (filterValue) => {
 
             break;
         
-            case "done":
-            todos.forEach((todo) => {
-                todo.classList.contains("done") 
-                ? todo.style.display = "flex" 
-                : todo.style.display = "none"
-            });
+        case "done":
+        todos.forEach((todo) => {
+            todo.classList.contains("done") 
+            ? todo.style.display = "flex" 
+            : todo.style.display = "none"
+        });
 
             break;
 
@@ -129,3 +129,72 @@ todoForm.addEventListener("submit", (e) => {
     };
 });
 
+document.addEventListener("click", (e) => {
+    const targetE1 = e.target;
+    const parentE1 = targetE1.closest("div");
+    let todoTitle;
+
+    if (parentE1 && parentE1.querySelector("h3")) {
+        todoTitle = parentE1.querySelector("h3").innerText || "";
+    };
+
+    if (targetE1.classList.contain("finish-todo")) {
+        parentE1.classList.toggle("done");
+
+        updateTodoStatusLocalStorage(todoTitle);
+    };
+
+    if (targetE1.classList.contains("remove-todo")) {
+        parentE1.remove();
+
+        //Utilizando dados da localStorage
+        removeTodoLocalStorage(todoTitle);
+    };
+
+    if (targetE1.classList.contains("edit-todo")) {
+        toggleForms();
+
+        editInput.value = todoTitle;
+        oldInputValue = todoTitle;
+    };
+});
+
+cancelEditBtn.addEventListener("click", (e) => {
+    e.preventDefault();
+
+    toggleForms();
+});
+
+editForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    const editInputValue = editInput.value;
+
+    if (editInputValue) {
+        updateTodo(editInputValue);
+    };
+
+    toggleForms();
+});
+
+searchInput.addEventListener("keyup", (e) => {
+    const search = e.target.value;
+
+    getSearchedTodos(search);
+});
+
+eraseBtn.addEventListener("click", (e) => {
+    e.preventDefault();
+
+    searchInput.value = "";
+
+    searchInput.dispatchEvent(new Event("keyup"));
+});
+
+filterBtn.addEventListener("change", (e) => {
+    const filterValue = e.target.value;
+
+    filterTodos(filterValue);
+});
+
+//local storage
