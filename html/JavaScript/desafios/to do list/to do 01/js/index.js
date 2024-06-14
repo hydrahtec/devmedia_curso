@@ -1,12 +1,12 @@
 // Seleção de elementos
 const todoForm = document.querySelector("#todo-form");
-const todoInput = document.querySelectot("#todo-input");
+const todoInput = document.querySelector("#todo-input");
 const todoList = document.querySelector("#todo-list");
 const editForm = document.querySelector("#edit-form");
 const editInput = document.querySelector("#edit-input");
-const cancelEditBtn = document.querySelector("cancel-edit-btn");
-const searchInput = document.querySelector("search-input");
-const eraseBtn = document.querySelector("erase-button");
+const cancelEditBtn = document.querySelector("#cancel-edit-btn");
+const searchInput = document.querySelector("#search-input");
+const eraseBtn = document.querySelector("#erase-button");
 const filterBtn = document.querySelector("#filter-select");
 
 let oldInputValue;
@@ -56,7 +56,7 @@ const toggleForms = () => {
 };
 
 const updateTodo = (text) => {
-    const todos = todo.querySelectorAll(".todo");
+    const todos = todoList.querySelectorAll(".todo");
 
     todos.forEach((todo) => {
         let todoTitle = todo.querySelector("h3");
@@ -68,6 +68,8 @@ const updateTodo = (text) => {
             updateTodoLocalStorage(oldInputValue, text)
         };
     });
+    
+    editInput.value = "";
 };
 
 const getSearchedTodos = (search) => {
@@ -89,7 +91,7 @@ const getSearchedTodos = (search) => {
 const filterTodos = (filterValue) => {
     const todos = document.querySelectorAll(".todo");
 
-    switch (filterValeu) {
+    switch (filterValue) {
         case "all":
             todos.forEach((todo) => {todo.style.display = "flex"});// parenteses?
 
@@ -138,7 +140,7 @@ document.addEventListener("click", (e) => {
         todoTitle = parentE1.querySelector("h3").innerText || "";
     };
 
-    if (targetE1.classList.contain("finish-todo")) {
+    if (targetE1.classList.contains("finish-todo")) {
         parentE1.classList.toggle("done");
 
         updateTodoStatusLocalStorage(todoTitle);
