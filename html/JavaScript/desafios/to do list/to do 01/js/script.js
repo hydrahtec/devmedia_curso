@@ -147,7 +147,7 @@ todoForm.addEventListener('submit', (e) => {
 
 document.addEventListener('click', (event) => {
     const targetEl = event.target;
-    const parentEl = targetEl.closest();
+    const parentEl = targetEl.closest('div');
     let titleTodo;
 
     if (parentEl && parentEl.querySelector('h3')) {
@@ -155,7 +155,7 @@ document.addEventListener('click', (event) => {
     };
 
     if (targetEl.classList.contains('finish-todo')) {
-        parentEl.classlist.toggle('done');
+        parentEl.classList.toggle("done");
 
         updateTodoStatusLocalStorage(titleTodo);
     };
@@ -172,6 +172,12 @@ document.addEventListener('click', (event) => {
 
         removeTodoLocalStorage(titleTodo);
     };
+});
+
+cancelEditBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+
+    toggleForms();
 });
 
 // localStorage
