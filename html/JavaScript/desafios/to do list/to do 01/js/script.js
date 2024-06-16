@@ -1,6 +1,6 @@
 // Select elements
-const todoForm = document.querySelector("#todo-form");
-const todoInput = document.querySelector("#todo-input");
+const todoForm = document.querySelector("#todo-form"); //ok
+const todoInput = document.querySelector("#todo-input"); //ok
 
 const editForm = document.querySelector("#edit-form");
 const editInput = document.querySelector("#edit-input");
@@ -11,7 +11,7 @@ const searchInput = document.querySelector("#search-input");
 
 const typeFilter = document.querySelector("#filter-select");
 
-const todoList = document.querySelector("#todo-list");
+const todoList = document.querySelector("#todo-list"); //ok
 
 let oldInputValue;
 
@@ -54,6 +54,12 @@ const saveTodo = (text, done = 0, save = 1) => {
     todoInput.value = "";
 
     todoInput.focus();
+};
+
+const toggleForms = () => {
+    todoForm.classList.toggle('hide');
+    editForm.classList.toggle('hide');
+    todoList.classList.toggle('hide');
 };
 
 //add events
