@@ -197,10 +197,17 @@ searchInput.addEventListener('keyup', (e) => {
     
     const searchValue = searchInput.value;
 
-    if (searchValue) {
-        searchTodo(searchValue);
-    }
+    searchTodo(searchValue);
+
     console.log(e);
+});
+
+eraseBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+
+    searchInput.value = "";
+
+    searchInput.dispatchEvent(new Event("keyup"));
 });
 
 // localStorage
