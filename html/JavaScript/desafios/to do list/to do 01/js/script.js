@@ -62,6 +62,22 @@ const toggleForms = () => {
     todoList.classList.toggle('hide');
 };
 
+const updateTodo = (text) => {
+    const todos = document.querySelectorAll('.todo');
+
+    todos.forEach((todo) => {
+        const titleTodo = todo.querySelector('h3');
+
+        if (titleTodo.textContent == oldInputValue) {
+            titleTodo.textContent = text;
+        };
+
+        //atualizando dados da localStorage
+
+        updateTodoLocalStorage(oldInputValue, text);
+    });
+};
+
 //add events
 todoForm.addEventListener('submit', (e) => {
     e.preventDefault();
@@ -97,5 +113,7 @@ const saveTodolocalStorage = (data) => {
 
     localStorage.setItem("todos", JSON.stringify(todos));
 };
+
+
 
 loadTodo();
