@@ -180,6 +180,18 @@ cancelEditBtn.addEventListener('click', (e) => {
     toggleForms();
 });
 
+editForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    const editInputValue = editInput.value;
+
+    if (editInputValue) {
+        updateTodo(editInputValue);
+    };
+
+    toggleForms();
+});
+
 // localStorage
 const getTodoLocalStorage = () => {
     const todos = JSON.parse(localStorage.getItem("todos")) || [];
