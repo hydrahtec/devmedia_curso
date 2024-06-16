@@ -77,7 +77,11 @@ const getTodoLocalStorage = () => {
 };
 
 const loadTodo = () => {
+    const todos = getTodoLocalStorage();
 
+    todos.forEach((todo) => {
+        saveTodo(todo.text, todo.done, 0);
+    });
 }
 
 const saveTodolocalStorage = (data) => {
@@ -87,3 +91,5 @@ const saveTodolocalStorage = (data) => {
 
     localStorage.setItem("todos", JSON.stringify(todos));
 };
+
+loadTodo();
