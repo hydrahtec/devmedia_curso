@@ -76,6 +76,10 @@ const updateTodo = (text) => {
 
         updateTodoLocalStorage(oldInputValue, text);
     });
+
+    editInput.value = "";
+
+    toggleForms();
 };
 
 //add events
@@ -114,6 +118,6 @@ const saveTodolocalStorage = (data) => {
     localStorage.setItem("todos", JSON.stringify(todos));
 };
 
-
+const updateTodoLocalStorage = () => {};
 
 loadTodo();
