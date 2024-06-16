@@ -145,6 +145,35 @@ todoForm.addEventListener('submit', (e) => {
     }
 });
 
+document.addEventListener('click', (event) => {
+    const targetEl = event.target;
+    const parentEl = targetEl.closest();
+    let titleTodo;
+
+    if (parentEl && parentEl.querySelector('h3')) {
+        titleTodo = parentEl.querySelector('h3').textContent || "";
+    };
+
+    if (targetEl.classList.contains('finish-todo')) {
+        parentEl.classlist.toggle('done');
+
+        updateTodoStatusLocalStorage(titleTodo);
+    };
+
+    if (targetEl.classList.contains('edit-todo')) {
+        toggleForms();
+
+        editInput.value = titleTodo;
+        oldInputValue = titleTodo;
+    };
+
+    if (targetEl.classList.contains('remove-todo')) {
+        parentEl.remove();
+
+        removeTodoLocalStorage(titleTodo);
+    };
+});
+
 // localStorage
 const getTodoLocalStorage = () => {
     const todos = JSON.parse(localStorage.getItem("todos")) || [];
@@ -169,5 +198,9 @@ const saveTodolocalStorage = (data) => {
 };
 
 const updateTodoLocalStorage = () => {};
+
+const updateTodoStatusLocalStorage = () => {};
+
+const removeTodoLocalStorage = () => {};
 
 loadTodo();
