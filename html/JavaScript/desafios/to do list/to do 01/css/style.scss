@@ -10,6 +10,7 @@ body {
     background-image: url("../img/bg.jpg");
     background-position: center;
     background-size: cover;
+    min-height: 100vh;
 }
 button {
     background-color: #fdfdfd;
@@ -38,7 +39,7 @@ input, select {
     padding: 0.25rem 0.5rem;
 }
 .hide {
-    display: 0.25rem 0.5rem;
+    display: none;
 }
 
 /* Todo Header */
