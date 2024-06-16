@@ -210,6 +210,14 @@ eraseBtn.addEventListener('click', (e) => {
     searchInput.dispatchEvent(new Event("keyup"));
 });
 
+typeFilter.addEventListener('change', (e) => {
+    e.preventDefault();
+
+    const filterValue = typeFilter.value;
+
+    filterTodo(filterValue);
+});
+
 // localStorage
 const getTodoLocalStorage = () => {
     const todos = JSON.parse(localStorage.getItem("todos")) || [];
