@@ -192,6 +192,17 @@ editForm.addEventListener('submit', (e) => {
     toggleForms();
 });
 
+searchInput.addEventListener('keyup', (e) => {
+    e.preventDefault();
+    
+    const searchValue = searchInput.value;
+
+    if (searchValue) {
+        searchTodo(searchValue);
+    }
+    console.log(e);
+});
+
 // localStorage
 const getTodoLocalStorage = () => {
     const todos = JSON.parse(localStorage.getItem("todos")) || [];
