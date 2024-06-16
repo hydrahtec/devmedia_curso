@@ -82,6 +82,20 @@ const updateTodo = (text) => {
     toggleForms();
 };
 
+const searchTodo = (search) => {
+    const todos = document.querySelectorAll('.todo');
+
+    todos.forEach((todo) => {
+        const titleTodo = todo.querySelector('h3').textContent.toLowerCase();
+
+        todo.style.display = 'flex'
+
+        if (!titleTodo.includes(search)) {
+            todo.style.display = 'none';
+        };
+    });
+};
+
 //add events
 todoForm.addEventListener('submit', (e) => {
     e.preventDefault();
