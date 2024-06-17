@@ -32,7 +32,7 @@ const saveTodo = (text, done = 0, save = 1) => {
 
     const deleteBtn = document.createElement("button");
     deleteBtn.classList.add("remove-todo");
-    deleteBtn.innerHTMl = '<i class="fa-solid fa-xmark"></i>';
+    deleteBtn.innerHTML = '<i class="fa-solid fa-xmark"></i>';
     todo.appendChild(deleteBtn);
 
     //utilizando dados da localStorage

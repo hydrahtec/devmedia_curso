@@ -31,7 +31,7 @@ const saveTodo = (text, done = 0, save = 1) => {
 
     const doneBtn = document.createElement('button');
     doneBtn.classList.add('finish-todo');
-    doneBtn.innerHTMl = '<i class="fa-solid fa-check"></i>';
+    doneBtn.innerHTML = '<i class="fa-solid fa-check"></i>';
     todo.appendChild(doneBtn);
 
     const editBtn = document.createElement('button');
@@ -132,6 +132,33 @@ todoForm.addEventListener('submit', (e) => {
     } else {
         window.alert('Não é possivel criar uma tarefa sem titulo, por favor tente novamente!!')
     }
+});
+document.addEventListener('click', (e) => {
+    const targeEl = e.target;
+    const parentEl = targeEl.closest('div');
+    let titleTodo;
+
+    if (parentEl && parentEl.querySelector('h3')) {
+        titleTodo = parentEl.querySelector('h3').textContent;
+    }
+    if (targeEl.classList.contains('finish-todo')) {
+        parentEl.classList.toggle('done');
+
+        updateTodoStatusLocalStorage(titleTodo);
+    };
+    if (targeEl.classList.contains('remove-todo')) {
+        parentEl.remove();
+
+        removeTodoLocalStorage(titleTodo);
+    };
+    if (targeEl.classList.contains('edit-todo')) {
+        toggleForms();
+
+        editInput.value = titleTodo;
+        editInput.focus();
+
+        oldInputValue = titleTodo
+    };
 });
 
 //Persistindo dados no localStorage
