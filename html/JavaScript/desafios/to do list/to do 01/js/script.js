@@ -44,11 +44,12 @@ const saveTodo = (text, done = 0, save = 1) => {
     removeBtn.innerHTML = '<i class="fa-solid fa-xmark"></i>';
     todo.appendChild(removeBtn);
     
+    // Utilizando dados do localStorage
     if (done) {
         todo.classList.add('done');
     }
     if (save) {
-        saveTodoLocalStorage({text, done});
+        saveTodoLocalStorage({text, done: 0});
     }
 
     todoList.appendChild(todo);
@@ -71,11 +72,25 @@ const updateTodo = (newInputValue) => {
 
     updateTodoLocalStorage(oldInputValue, newInputValue);
 
+    editInput.value = "";
+
     toggleForms();
 };
 // filtrar tarefa
 
-// buscar tarefa
+const searchTodo = (search) => {
+    const todos = document.querySelectorAll('.todos');
+
+    todos.forEach((todo) => {
+        const titleTodo = todo.querySelector('h3').textContent.toLowerCase();
+
+        todo.style.display = 'flex;'
+
+        if (!titleTodo.includes(search)) {
+            todo.style.display = 'none';
+        };
+    });
+};
 
 // Eventos
 
