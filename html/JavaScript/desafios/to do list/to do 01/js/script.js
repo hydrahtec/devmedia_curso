@@ -188,8 +188,6 @@ editForm.addEventListener('submit', (e) => {
     if (editInputValue) {
         updateTodo(editInputValue);
     };
-
-    toggleForms();
 });
 
 searchInput.addEventListener('keyup', (e) => {
@@ -241,7 +239,17 @@ const saveTodolocalStorage = (data) => {
     localStorage.setItem("todos", JSON.stringify(todos));
 };
 
-const updateTodoLocalStorage = () => {};
+const updateTodoLocalStorage = (oldInputValue, newInputValue) => {
+    let todos = getTodoLocalStorage();
+
+    todos.forEach((todo) => {
+        if (todo.text == oldInputValue) {
+            todo.text = newInputValue;
+        }
+    });
+
+    localStorage.setItem('todos', JSON.stringify(todos));
+};
 
 const updateTodoStatusLocalStorage = () => {};
 
