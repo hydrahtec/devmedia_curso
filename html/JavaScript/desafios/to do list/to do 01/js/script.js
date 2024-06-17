@@ -1,5 +1,17 @@
 // Selecionando elementtos
+const todoForm = document.querySelector('#todo-form');
+const todoInput = document.querySelector('#todo-input');
 
+const editForm = document.querySelector('#edit-form');
+const editInput = document.querySelector('#edit-input');
+const editCancelBtn = document.querySelector('#cancel-edit-btn');
+
+const eraseBtn = document.querySelector('#erase-button');
+const searchInput = document.querySelector('#search-input');
+
+const filterValue = document.querySelector('#filter-select');
+
+const todoList = document.querySelector('#todo-list');
 // Funções
 
 // Eventos
