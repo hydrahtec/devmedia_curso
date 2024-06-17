@@ -253,6 +253,12 @@ const updateTodoLocalStorage = (oldInputValue, newInputValue) => {
 
 const updateTodoStatusLocalStorage = () => {};
 
-const removeTodoLocalStorage = () => {};
+const removeTodoLocalStorage = (titleTodo) => {
+    const todos = getTodoLocalStorage();
+
+    const newTodos = todos.filter((todo) => todo.text != titleTodo);
+
+    localStorage.setItem("todos", JSON.stringify(newTodos));
+};
 
 loadTodo();
