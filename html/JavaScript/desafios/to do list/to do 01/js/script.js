@@ -185,6 +185,13 @@ searchInput.addEventListener('keyup', (e) => {
 
     searchTodo(searchValue);
 });
+eraseBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+
+    searchInput.value = "";
+
+    searchInput.dispatchEvent(new Event('keyup'));
+});
 
 //Persistindo dados no localStorage
 const getTodoLocalStorage = () => {
