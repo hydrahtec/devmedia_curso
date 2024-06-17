@@ -16,6 +16,11 @@ const todoList = document.querySelector('#todo-list');
 let oldInputValue;
 
 // Funções
+const toggleForms = () => {
+    todoForm.classList.toggle('hide');
+    editForm.classList.toggle('hide');
+    todoList.classList.toggle('hide');
+};
 const saveTodo = (text, done = 0, save = 1) => {
     const todo = document.createElement('div');
     todo.classList.add('todo')
@@ -68,11 +73,6 @@ const updateTodo = (newInputValue) => {
 
     toggleForms();
 };
-
-//remover tarefa
-
-// trocar formulario
-
 // filtrar tarefa
 
 // buscar tarefa
