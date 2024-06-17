@@ -31,5 +31,12 @@ const removeTodoLocalStorage = (titleTodo) => {
 
     localStorage.setItem('todos', JSON.stringify(filterTodos));
 };
+const updateTodoStatusLocalStorage = (titleTodo) => {
+    const todos = getTodoLocalStorage();
+
+    todos.forEach((todo) => {
+        todo.text == titleTodo ? (todo.done = !todo.done) : null;
+    });
+};
 
 loadTodo();
