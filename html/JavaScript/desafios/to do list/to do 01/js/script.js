@@ -24,6 +24,12 @@ const saveTodoLocalStorage = (todo) => {
 
     localStorage.setItem('todos', JSON.stringify(todos));
 };
+const removeTodoLocalStorage = (titleTodo) => {
+    const todos = getTodoLocalStorage();
 
+    const filterTodos = todos.filter((todo) => todo.text != titleTodo);
+
+    localStorage.setItem('todos', JSON.stringify(filterTodos));
+};
 
 loadTodo();
