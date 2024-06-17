@@ -171,6 +171,13 @@ editForm.addEventListener('submit', (e) => {
         window.alert('Não é possivel criar uma tarefa sem titulo, por favor tente novamente!!');
     }
 });
+editCancelBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+
+    toggleForms();
+
+    todoInput.focus();
+})
 
 //Persistindo dados no localStorage
 const getTodoLocalStorage = () => {
