@@ -9,7 +9,7 @@ const editCancelBtn = document.querySelector('#cancel-edit-btn');
 const eraseBtn = document.querySelector('#erase-button');
 const searchInput = document.querySelector('#search-input');
 
-const filterValue = document.querySelector('#filter-select');
+const filterSelect = document.querySelector('#filter-select');
 
 const todoList = document.querySelector('#todo-list');
 
@@ -191,6 +191,13 @@ eraseBtn.addEventListener('click', (e) => {
     searchInput.value = "";
 
     searchInput.dispatchEvent(new Event('keyup'));
+});
+filterSelect.addEventListener('change', (e) => {
+    e.preventDefault();
+
+    const filterValue = filterSelect.value;
+
+    filterTodo(filterValue);
 });
 
 //Persistindo dados no localStorage
