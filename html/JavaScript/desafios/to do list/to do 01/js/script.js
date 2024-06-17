@@ -122,6 +122,17 @@ const searchTodo = (search) => {
 };
 
 // Eventos
+todoForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    const Inputvalue = todoInput.value;
+
+    if (Inputvalue) {
+        saveTodo(Inputvalue);
+    } else {
+        window.alert('Não é possivel criar uma tarefa sem titulo, por favor tente novamente!!')
+    }
+});
 
 //Persistindo dados no localStorage
 const getTodoLocalStorage = () => {
