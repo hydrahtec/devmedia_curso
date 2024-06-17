@@ -251,7 +251,16 @@ const updateTodoLocalStorage = (oldInputValue, newInputValue) => {
     localStorage.setItem('todos', JSON.stringify(todos));
 };
 
-const updateTodoStatusLocalStorage = () => {};
+const updateTodoStatusLocalStorage = (titleTodo) => {
+    let todos = getTodoLocalStorage();
+    
+    todos.forEach((todo) => {
+        console.log(todos);
+        todo.text == titleTodo ? (todo.done = !todo.done) : null;
+    });
+
+    localStorage.setItem('todos', JSON.stringify(todos));
+};
 
 const removeTodoLocalStorage = (titleTodo) => {
     const todos = getTodoLocalStorage();
