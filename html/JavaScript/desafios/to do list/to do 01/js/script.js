@@ -108,12 +108,12 @@ const filterTodo = (filterValue) => {
     }
 };
 const searchTodo = (search) => {
-    const todos = document.querySelectorAll('.todos');
+    const todos = document.querySelectorAll('.todo');
 
     todos.forEach((todo) => {
         const titleTodo = todo.querySelector('h3').textContent.toLowerCase();
 
-        todo.style.display = 'flex;'
+        todo.style.display = 'flex';
 
         if (!titleTodo.includes(search)) {
             todo.style.display = 'none';
@@ -177,7 +177,14 @@ editCancelBtn.addEventListener('click', (e) => {
     toggleForms();
 
     todoInput.focus();
-})
+});
+searchInput.addEventListener('keyup', (e) => {
+    e.preventDefault();
+
+    const searchValue = searchInput.value;
+
+    searchTodo(searchValue);
+});
 
 //Persistindo dados no localStorage
 const getTodoLocalStorage = () => {
