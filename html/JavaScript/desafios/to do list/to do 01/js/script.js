@@ -52,7 +52,22 @@ const saveTodo = (text, done = 0, save = 1) => {
 
     todoInput.focus();
 };
-//atualiza tarefa
+const updateTodo = (newInputValue) => {
+    const todos = document.querySelectorAll('.todo');
+    let titleTodo
+
+    todos.forEach((todo) => {
+        titleTodo = todo.querySelector('h3');
+
+        if (titleTodo.textContent == oldInputValue) {
+            titleTodo.textContent = newInputValue;
+        }
+    });
+
+    updateTodoLocalStorage(oldInputValue, newInputValue);
+
+    toggleForms();
+};
 
 //remover tarefa
 
