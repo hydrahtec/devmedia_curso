@@ -10,3 +10,8 @@ const getTodoLocalStorage = () => {
 
     return todos;
 };
+const loadTodo = () => {
+    const todos = getTodoLocalStorage();
+
+    saveTodo(todos);
+};
