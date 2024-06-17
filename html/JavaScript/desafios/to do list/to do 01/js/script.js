@@ -113,11 +113,11 @@ const updateTodoStatusLocalStorage = (titleTodo) => {
         todo.text == titleTodo ? (todo.done = !todo.done) : null;
     });
 };
-const updateTodoLocalStorage = (titleTodo) => {
+const updateTodoLocalStorage = (oldInputValue, newInputValue) => {
     const todos = getTodoLocalStorage();
 
     todos.forEach((todo) => {
-        todo.text == titleTodo ? (todo.text = titleTodo) : null;
+        todo.text == oldInputValue ? (todo.text = newInputValue) : null;
     });
 };
 loadTodo();
