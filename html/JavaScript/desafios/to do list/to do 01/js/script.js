@@ -160,6 +160,17 @@ document.addEventListener('click', (e) => {
         oldInputValue = titleTodo
     };
 });
+editForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    const newValue = editInput.value;
+
+    if(newValue) {
+        updateTodo(newValue);
+    } else {
+        window.alert('Não é possivel criar uma tarefa sem titulo, por favor tente novamente!!');
+    }
+});
 
 //Persistindo dados no localStorage
 const getTodoLocalStorage = () => {
@@ -203,5 +214,7 @@ const updateTodoLocalStorage = (oldInputValue, newInputValue) => {
     todos.forEach((todo) => {
         todo.text == oldInputValue ? (todo.text = newInputValue) : null;
     });
+
+    localStorage.setItem('todos', JSON.stringify(todos));
 };
 loadTodo();
