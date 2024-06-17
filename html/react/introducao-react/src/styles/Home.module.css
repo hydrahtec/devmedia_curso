@@ -1,12 +1,9 @@
-* {
-
-}
 .container {
-
+    display: inherit;
 }
 .section-title {
-
+    display: inherit;
 }
 .section-requisitos {
-
+    display: inherit;
 }
