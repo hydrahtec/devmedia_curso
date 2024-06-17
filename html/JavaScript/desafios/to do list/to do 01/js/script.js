@@ -15,3 +15,10 @@ const loadTodo = () => {
 
     saveTodo(todos);
 };
+const saveTodoLocalStorage = (todo) => {
+    const todos = getTodoLocalStorage();
+
+    todos.push(todo);
+
+    localStorage.setItem('todos', JSON.stringify(todos));
+};
