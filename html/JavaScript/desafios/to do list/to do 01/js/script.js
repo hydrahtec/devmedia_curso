@@ -58,6 +58,23 @@ const toggleForms = () => {
     editForm.classList.toggle('hide');
     todoList.classList.toggle('hide');
 };
+const updateTodo = (newInputValue) => {
+    const todos = document.querySelectorAll('.todo');
+    
+    todos.forEach((todo) => {
+        let titleTodo = todo.querySelector('h3');
+        
+        if (titleTodo.textContent == oldInputValue) {
+            titleTodo.textContent = newInputValue;
+
+            updateTodoLocalStorage(oldInputValue, newInputValue);
+        }
+    });
+
+    toggleForms();
+
+    todoInput.focus();
+};
 // events
 todoForm.addEventListener('submit', (e) => {
 
@@ -93,10 +110,10 @@ document.addEventListener('click', (e) => {
     if (targetEl.classList.contains('edit-todo')) {
         toggleForms();
 
+        oldInputValue = titleTodo;
         editInput.value = titleTodo;
         editInput.focus();
 
-        oldInputValue = titleTodo;
     }
     
 });
@@ -166,6 +183,8 @@ const updateTodoLocalStorage = (oldtitleTodo, newTitleTodo) => {
     todos.forEach((todo) => {
         todo.text == oldtitleTodo ? (todo.text = newTitleTodo) : null;
     });
+
+    localStorage.setItem('todos', JSON.stringify(todos));
 };
 const removeTodoLocalStorage = (titleTodo) => {
     const todos = getTodoLocalStorage();
