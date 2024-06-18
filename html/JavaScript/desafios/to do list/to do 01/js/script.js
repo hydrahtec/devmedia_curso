@@ -93,6 +93,11 @@ document.addEventListener('click', (e) => {
     }
     
 });
+const toggleForms = () => {
+    todoForm.classList.toggle('hide');
+    editForm.classList.toggle('hide');
+    todoList.classList.toggle('hide');
+};
 editForm.addEventListener('submit', (e) => {
     e.preventDefault();
 });
