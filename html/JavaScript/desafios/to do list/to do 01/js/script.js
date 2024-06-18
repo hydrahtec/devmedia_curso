@@ -94,5 +94,12 @@ const loadTodo = () => {
 
     saveTodo(todos.text, todos.done, 0);
 };
+const saveTodolocalStorage = (todo) => {
+    const todos = getTodoLocalStorage();
+
+    todos.push(todo);
+
+    localStorage.setItem('todos', JSON.stringify(todos));
+};
 
 loadTodo();
