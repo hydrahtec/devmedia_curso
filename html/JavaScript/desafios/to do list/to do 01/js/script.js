@@ -89,3 +89,10 @@ const getTodoLocalStorage = () => {
 
     return todos;
 };
+const loadTodo = () => {
+    const todos = getTodoLocalStorage();
+
+    saveTodo(todos.text, todos.done, 0);
+};
+
+loadTodo();
