@@ -75,6 +75,13 @@ const updateTodo = (newInputValue) => {
 
     todoInput.focus();
 };
+const eraseInput = () => {
+    searchInput.value = "";
+
+    searchInput.dispatchEvent(new Event('keyup'));
+
+    searchInput.focus();
+};
 // events
 todoForm.addEventListener('submit', (e) => {
 
@@ -144,6 +151,8 @@ searchInput.addEventListener('keyup', (e) => {
 });
 eraseBtn.addEventListener('click', (e) => {
     e.preventDefault();
+
+    eraseInput();
 });
 filterSlt.addEventListener('change', (e) => {
     e.preventDefault();
