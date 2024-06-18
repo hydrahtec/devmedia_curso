@@ -18,7 +18,7 @@ const saveTodo = (text, done = 0, save = 1) => {
     const todo = document.createElement('div');
     todo.classList.add('todo');
 
-    const titleTodo = document.createElement('h2');
+    const titleTodo = document.createElement('h3');
     titleTodo.textContent = text;
     todo.appendChild(titleTodo);
 
@@ -30,18 +30,18 @@ const saveTodo = (text, done = 0, save = 1) => {
     const editBtn = document.createElement('button');
     editBtn.classList.add('edit-todo');
     editBtn.innerHTML = '<i class="fa-solid fa-pen"></i>';
-    todo.appendChild(doneBtn);
+    todo.appendChild(editBtn);
 
     const deleteBtn = document.createElement('button');
     deleteBtn.classList.add('remove-todo');
     deleteBtn.innerHTML = '<i class="fa-solid fa-xmark"></i>';
-    todo.appendChild(doneBtn);
+    todo.appendChild(deleteBtn);
 
     if (done) {
         todo.classList.add('done');
     }
 
-    if(save) {
+    if (save) {
         saveTodolocalStorage({text, done: 0});
     }
 
@@ -53,6 +53,7 @@ const saveTodo = (text, done = 0, save = 1) => {
 };
 // events
 todoForm.addEventListener('submit', (e) => {
+
     e.preventDefault();
 
     const inputValue = todoInput.value;
@@ -61,10 +62,10 @@ todoForm.addEventListener('submit', (e) => {
         saveTodo(inputValue);
     } else {
         window.alert('Não é possivel criar uma tarefa sem titulo, por favor tente novamente!!');
-    }
+    };
 });
 document.addEventListener('click', (e) => {
-    e.preventDefault();
+    
 });
 editForm.addEventListener('submit', (e) => {
     e.preventDefault();
@@ -92,7 +93,9 @@ const getTodoLocalStorage = () => {
 const loadTodo = () => {
     const todos = getTodoLocalStorage();
 
-    saveTodo(todos.text, todos.done, 0);
+    todos.forEach((todo) => {
+        saveTodo(todo.text, todo.done, 0);
+    });
 };
 const saveTodolocalStorage = (todo) => {
     const todos = getTodoLocalStorage();
