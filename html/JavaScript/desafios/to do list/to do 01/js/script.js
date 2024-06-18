@@ -84,3 +84,8 @@ filterSlt.addEventListener('change', (e) => {
     e.preventDefault();
 });
 // LocalStorage
+const getTodoLocalStorage = () => {
+    const todos = JSON.parse(localStorage.getItem('todos')) || [];
+
+    return todos;
+};
