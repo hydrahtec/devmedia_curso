@@ -191,7 +191,7 @@ cancelEditBtn.addEventListener('click', (e) => {
     todoInput.focus();
 });
 searchInput.addEventListener('keyup', (e) => {
-    //e.preventDefault();
+    e.preventDefault();
 
     const searchValue = searchInput.value;
 
@@ -204,6 +204,10 @@ eraseBtn.addEventListener('click', (e) => {
 });
 filterSlt.addEventListener('change', (e) => {
     e.preventDefault();
+
+    const filterValue = filterSlt.value;
+
+    filterTodo(filterValue);
 });
 // LocalStorage
 const getTodoLocalStorage = () => {
