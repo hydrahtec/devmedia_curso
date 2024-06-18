@@ -152,6 +152,13 @@ const updateTodoStatusLocalStorage = (titleTodo) => {
 
     localStorage.setItem('todos', JSON.stringify(todos));
 };
+const updateTodoLocalStorage = (oldtitleTodo, newTitleTodo) => {
+    const todos = getTodoLocalStorage();
+
+    todos.forEach((todo) => {
+        todo.text == oldtitleTodo ? (todo.text = newTitleTodo) : null;
+    });
+};
 const removeTodoLocalStorage = (titleTodo) => {
     const todos = getTodoLocalStorage();
 
