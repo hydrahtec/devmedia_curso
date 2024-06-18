@@ -96,6 +96,38 @@ const searchTodo = (searchValue) => {
         }
     });
 };
+const filterTodo = (filterValue) => {
+    const todos = document.querySelectorAll('.todo');
+
+    switch (filterValue) {
+        case 'all':
+            todos.forEach((todo) => {
+                todo.style.display = 'flex';
+            });
+            break;        
+        case 'done':
+            todos.forEach((todo) => {
+
+                if(todo.classList.contains('done')) {
+                    todo.style.display = 'flex';
+                } else {
+                    todo.style.display = 'none';
+                }
+            });
+            break;        
+        case 'todo':
+            todos.forEach((todo) => {
+                if (!todo.classList.contains('done')) {
+                    todo.style.display = 'flex';
+                } else {
+                    todo.style.display = 'none';
+                }
+            });
+            break;
+        default:
+            break;        
+    }
+};
 // events
 todoForm.addEventListener('submit', (e) => {
 
