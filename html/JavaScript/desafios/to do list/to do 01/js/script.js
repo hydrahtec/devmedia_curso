@@ -28,13 +28,13 @@ const saveTodo = (text, done = 0, save = 1) => {
     todo.appendChild(doneBtn);
 
     const editBtn = document.createElement('button');
-    doneBtn.classList.add('edit-todo');
-    doneBtn.innerHTML = '<i class="fa-solid fa-pen"></i>';
+    editBtn.classList.add('edit-todo');
+    editBtn.innerHTML = '<i class="fa-solid fa-pen"></i>';
     todo.appendChild(doneBtn);
 
     const deleteBtn = document.createElement('button');
-    doneBtn.classList.add('remove-todo');
-    doneBtn.innerHTML = '<i class="fa-solid fa-xmark"></i>';
+    deleteBtn.classList.add('remove-todo');
+    deleteBtn.innerHTML = '<i class="fa-solid fa-xmark"></i>';
     todo.appendChild(doneBtn);
 
     if (done) {
@@ -54,6 +54,14 @@ const saveTodo = (text, done = 0, save = 1) => {
 // events
 todoForm.addEventListener('submit', (e) => {
     e.preventDefault();
+
+    const inputValue = todoInput.value;
+
+    if (inputValue) {
+        saveTodo(inputValue);
+    } else {
+        window.alert('Não é possivel criar uma tarefa sem titulo, por favor tente novamente!!');
+    }
 });
 document.addEventListener('click', (e) => {
     e.preventDefault();
