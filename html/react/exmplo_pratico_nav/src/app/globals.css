@@ -4,3 +4,12 @@
     box-sizing: border-box;
     font-family: Tahoma, sans-serif;
 }
+.link_retorno {
+    padding: 20px 60px;
+    background-color: red;
+    font-size: 18px;
+    font-weight: 600;
+    color: white;
+    text-decoration: none;
+    border-radius: 40px;
+}
