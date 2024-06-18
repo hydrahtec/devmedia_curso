@@ -21,6 +21,7 @@ export default function Mobile() {
             >
             Guia de Mobile
             </Link>
+            <Link className="link_retorno" href="/">Voltar</Link>
         </div>
     );
 };

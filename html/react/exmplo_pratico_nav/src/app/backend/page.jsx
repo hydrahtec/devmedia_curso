@@ -21,6 +21,7 @@ export default function Backend() {
             >
                 Guia de Back-end
             </Link>
+            <Link className="link_retorno" href="/">Voltar</Link>
         </div>
     );
 };
