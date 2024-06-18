@@ -103,6 +103,12 @@ editForm.addEventListener('submit', (e) => {
 });
 cancelEditBtn.addEventListener('click', (e) => {
     e.preventDefault();
+
+    toggleForms();
+
+    editInput.value = "";
+    
+    todoInput.focus();
 });
 searchInput.addEventListener('keyup', (e) => {
     e.preventDefault();
