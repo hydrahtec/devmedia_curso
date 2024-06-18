@@ -53,6 +53,11 @@ const saveTodo = (text, done = 0, save = 1) => {
 
     todoInput.focus();
 };
+const toggleForms = () => {
+    todoForm.classList.toggle('hide');
+    editForm.classList.toggle('hide');
+    todoList.classList.toggle('hide');
+};
 // events
 todoForm.addEventListener('submit', (e) => {
 
@@ -67,6 +72,7 @@ todoForm.addEventListener('submit', (e) => {
     };
 });
 document.addEventListener('click', (e) => {
+
     const targetEl = e.target;
     const parentEl = targetEl.closest('div');
     let titleTodo;
@@ -88,16 +94,12 @@ document.addEventListener('click', (e) => {
         toggleForms();
 
         editInput.value = titleTodo;
+        editInput.focus();
 
         oldInputValue = titleTodo;
     }
     
 });
-const toggleForms = () => {
-    todoForm.classList.toggle('hide');
-    editForm.classList.toggle('hide');
-    todoList.classList.toggle('hide');
-};
 editForm.addEventListener('submit', (e) => {
     e.preventDefault();
 });
@@ -107,7 +109,7 @@ cancelEditBtn.addEventListener('click', (e) => {
     toggleForms();
 
     editInput.value = "";
-    
+
     todoInput.focus();
 });
 searchInput.addEventListener('keyup', (e) => {
@@ -142,7 +144,13 @@ const saveTodolocalStorage = (todo) => {
     localStorage.setItem('todos', JSON.stringify(todos));
 };
 const updateTodoStatusLocalStorage = (titleTodo) => {
-    
+    const todos = getTodoLocalStorage();
+
+    todos.forEach((todo) => {
+        todo.text == titleTodo ? (todo.done = !todo.done) : null;
+    });
+
+    localStorage.setItem('todos', JSON.stringify(todos));
 };
 const removeTodoLocalStorage = (titleTodo) => {
 
