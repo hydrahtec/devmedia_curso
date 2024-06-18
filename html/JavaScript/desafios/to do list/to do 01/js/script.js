@@ -75,12 +75,26 @@ const updateTodo = (newInputValue) => {
 
     todoInput.focus();
 };
-const eraseInput = () => {
+const eraseEditInput = () => {
     searchInput.value = "";
 
     searchInput.dispatchEvent(new Event('keyup'));
 
     searchInput.focus();
+};
+const searchTodo = (searchValue) => {
+    const todos = document.querySelectorAll('.todo');
+
+    todos.forEach((todo) => {
+        const titleTodo = todo.querySelector('h3').textContent.toLowerCase();
+        console.log(titleTodo);
+        
+        todo.style.display = 'flex';
+
+        if (!titleTodo.includes(searchValue)) {
+            todo.style.display = 'none';
+        }
+    });
 };
 // events
 todoForm.addEventListener('submit', (e) => {
@@ -145,14 +159,16 @@ cancelEditBtn.addEventListener('click', (e) => {
     todoInput.focus();
 });
 searchInput.addEventListener('keyup', (e) => {
-    e.preventDefault();
+    //e.preventDefault();
 
+    const searchValue = searchInput.value;
 
+    searchTodo(searchValue);
 });
 eraseBtn.addEventListener('click', (e) => {
     e.preventDefault();
 
-    eraseInput();
+    eraseEditInput();
 });
 filterSlt.addEventListener('change', (e) => {
     e.preventDefault();
