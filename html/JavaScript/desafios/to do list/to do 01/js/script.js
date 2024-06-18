@@ -102,6 +102,14 @@ document.addEventListener('click', (e) => {
 });
 editForm.addEventListener('submit', (e) => {
     e.preventDefault();
+
+    const editValue = editInput.value;
+
+    if (editValue) {
+        updateTodo(editValue);
+    } else {
+        window.alert('Não é possivel criar tarefas sem titulo, verifique e tente novamente!!');
+    }
 });
 cancelEditBtn.addEventListener('click', (e) => {
     e.preventDefault();
