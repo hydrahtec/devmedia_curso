@@ -1,12 +1,30 @@
 .card {
-
+    width: 150px;
+    padding: 5px;
+    display: flex;
+    border-radius: 5px;
+    align-items: center;
+    transition: all 0.3s;
+    flex-direction: column;
+    justify-content: center;
+    border: 1px solid black;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.37);
+}
+.card:hover {
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.37);
 }
 .card h3{
-    
+    border-bottom: 1px solid black;
+    margin-bottom: 3px;
+    width: 100%;
 }
 .card p {
-    
+    border-top: 1px solid black;
+    margin-top: 3px;
+    width: 100%;
 }
 .link_info {
-    
+    text-decoration: none;
+    color:  rgb(37, 67, 214);
+    padding: 10px;
 }

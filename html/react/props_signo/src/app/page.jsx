@@ -5,6 +5,17 @@ export default function Home() {
   return (
     <main className={styles.main}>
       <CardSigno />
+      <CardSigno />
+      <CardSigno />
+      <CardSigno />
+      <CardSigno />
+      <CardSigno />
+      <CardSigno />
+      <CardSigno />
+      <CardSigno />
+      <CardSigno />
+      <CardSigno />
+      <CardSigno />
     </main>
   );
 }
