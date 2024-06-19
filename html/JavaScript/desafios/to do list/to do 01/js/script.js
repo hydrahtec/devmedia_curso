@@ -30,6 +30,13 @@ const saveTodoLocalStorage = (todo) => {
 
     localStorage.setItem('todos', JSON.stringify(todos));
 };
+const removeTodoLocalStorage = (titleTodo) => {
+    const todos = getTodoLocalStorge();
+
+    const newTodos = todos.filter((todo) => todo.text != titleTodo);
+
+    localStorage.setItem('todos', JSON.stringify(newTodos));
+};
 // funções
 
 
