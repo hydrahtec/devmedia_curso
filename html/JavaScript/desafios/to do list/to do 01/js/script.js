@@ -165,5 +165,32 @@ const eraseEditInput = () => {
 };
 
 // eventos
+todoForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    
+});
+document.addEventListener('click', () => {
+
+});
+editForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    
+});
+cancelEditBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    
+});
+filterSelect.addEventListener('change', (e) => {
+    e.preventDefault();
+    
+});
+searchInput.addEventListener('keyup', (e) => {
+    e.preventDefault();
+    
+});
+eraseBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    
+});
 
 loadTodo();
