@@ -57,7 +57,11 @@ const updateTodoLocalStorage = (oldInputValue, newInputValue) => {
 };
 // funções
 const saveTodo = (text, done = 0, save = 1) => {};
-const toggleTodo = () => {};
+const toggleTodo = () => {
+    todoForm.classList.toggle('hide');
+    todoList.classList.toggle('hide');
+    editForm.classList.toggle('hide');
+};
 const updateTodo = (oldInputValue, newInputValue) => {
     const todos = document.querySelectorAll('.todos');
 };
