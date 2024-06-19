@@ -98,7 +98,7 @@ const toggleForms = () => {
     editForm.classList.toggle('hide');
 };
 const updateTodo = (oldInputValue, newInputValue) => {
-    const todos = document.querySelectorAll('.todos');
+    const todos = document.querySelectorAll('.todo');
 
     todos.forEach((todo) => {
         const titleTodo = todo.querySelector('h3');
@@ -118,7 +118,7 @@ const updateTodo = (oldInputValue, newInputValue) => {
     todoInput.focus;
 };
 const filterTodo = (filterValue) => {
-    const todos = document.querySelectorAll('.todos');
+    const todos = document.querySelectorAll('.todo');
 
     switch (filterValue) {
         case 'all':
@@ -150,11 +150,13 @@ const filterTodo = (filterValue) => {
     };
 };
 const searchTodo = (searchValue) => {
-    const todos = document.querySelectorAll('.todos');
+    const todos = document.querySelectorAll('.todo');
     let titleTodo;
 
     todos.forEach((todo) => {
         titleTodo = todo.querySelector('h3').textContent.toLowerCase();
+
+        todo.style.display = 'flex';
 
         if(!titleTodo.includes(searchValue)) {
             todo.style.display = 'none';
@@ -204,12 +206,14 @@ document.addEventListener('click', (e) => {
         toggleForms();
 
         editInput.value = titleTodo;
+        editInput.focus();
+
         oldInputValue = titleTodo;
     };
 });
 editForm.addEventListener('submit', (e) => {
     e.preventDefault();
-
+    
     const newinputValue = editInput.value;
 
     if(newinputValue) {
