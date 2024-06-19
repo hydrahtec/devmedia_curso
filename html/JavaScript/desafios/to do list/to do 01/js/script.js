@@ -37,6 +37,15 @@ const removeTodoLocalStorage = (titleTodo) => {
 
     localStorage.setItem('todos', JSON.stringify(newTodos));
 };
+const updateTodoStatusLocalStorage = (titleTodo) => {
+    const todos = getTodoLocalStorge();
+
+    todos.forEach((todo) => {
+        todo.text == titleTodo ? (todo.done = !todo.done) : null;
+    });
+
+    localStorage.setItem('todos', JSON.stringify(todos));
+};
 // funções
 
 
