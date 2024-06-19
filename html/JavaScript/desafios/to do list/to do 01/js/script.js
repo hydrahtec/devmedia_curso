@@ -23,7 +23,13 @@ const loadTodo = () => {
         saveTodo(todo.text, todo.done, 0);
     });
 };
+const saveTodoLocalStorage = (todo) => {
+    const todos = getTodoLocalStorge();
 
+    todos.push(todo);
+
+    localStorage.setItem('todos', JSON.stringify(todos));
+};
 // funções
 
 
