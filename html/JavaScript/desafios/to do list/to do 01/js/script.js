@@ -162,12 +162,12 @@ const searchTodo = (searchValue) => {
     });
 
 };
-const eraseEditInput = () => {
-    editInput.value = "";
+const eraseSearchInput = () => {
+    searchInput.value = "";
 
-    editInput.dispatchEvent(new Event('keyup'));
+    searchInput.dispatchEvent(new Event('keyup'));
 
-    editInput.focus();
+    searchInput.focus();
 };
 
 // eventos
@@ -225,6 +225,7 @@ searchInput.addEventListener('keyup', (e) => {
 eraseBtn.addEventListener('click', (e) => {
     e.preventDefault();
 
+    eraseSearchInput();
 });
 
 loadTodo();
