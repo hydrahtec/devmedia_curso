@@ -64,6 +64,17 @@ const toggleTodo = () => {
 };
 const updateTodo = (oldInputValue, newInputValue) => {
     const todos = document.querySelectorAll('.todos');
+
+    todos.forEach((todo) => {
+        const titleTodo = todo.querySelector('h3');
+
+        if (titleTodo.textContent == oldInputValue) {
+            titleTodo.textContent = newInputValue;
+
+            updateTodoLocalStorage(oldInputValue, newInputValue);
+        };
+
+    });
 };
 const removeTodo = (titleTodo) => {
     const todos = document.querySelectorAll('.todos');
