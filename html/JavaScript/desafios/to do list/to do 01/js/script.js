@@ -16,6 +16,13 @@ const getTodoLocalStorge = () => {
 
     return todos;
 };
+const loadTodo = () => {
+    const todos = getTodoLocalStorge();
+
+    todos.forEach((todo) => {
+        saveTodo(todo.text, todo.done, 0);
+    });
+};
 
 // funções
 
