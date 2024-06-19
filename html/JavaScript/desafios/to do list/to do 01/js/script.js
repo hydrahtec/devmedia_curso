@@ -56,6 +56,25 @@ const updateTodoLocalStorage = (oldInputValue, newInputValue) => {
     localStorage.setItem('todos', JSON.stringify(todos));
 };
 // funções
+const saveTodo = (text, done = 0, save = 1) => {};
+const toggleTodo = () => {};
+const updateTodo = (oldInputValue, newInputValue) => {
+    const todos = document.querySelectorAll('.todos');
+};
+const removeTodo = (titleTodo) => {
+    const todos = document.querySelectorAll('.todos');
 
+};
+const filterTodo = (filterValue) => {
+    const todos = document.querySelectorAll('.todos');
+
+};
+const searchTodo = (searchValue) => {
+    const todos = document.querySelectorAll('.todos');
+
+};
+const eraseInput = () => {};
 
 // eventos
+
+loadTodo();
