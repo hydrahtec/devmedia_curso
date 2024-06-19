@@ -77,7 +77,13 @@ const searchTodo = (searchValue) => {
     const todos = document.querySelectorAll('.todos');
 
 };
-const eraseInput = () => {};
+const eraseEditInput = () => {
+    editInput.value = "";
+
+    editInput.dispatchEvent(new Event('keyup'));
+
+    editInput.focus();
+};
 
 // eventos
 
