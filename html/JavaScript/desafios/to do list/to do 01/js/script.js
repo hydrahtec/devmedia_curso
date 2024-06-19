@@ -182,8 +182,30 @@ todoForm.addEventListener('submit', (e) => {
         window.alert('Não é possivel criar uma tarefa sem titulo, por favor verifique e tente novamente');
     }
 });
-document.addEventListener('click', () => {
+document.addEventListener('click', (e) => {
+    const targetEl = e.target;
+    const parentEl = targetEl.closest('div');
+    let titleTodo;
 
+    if (parentEl && parentEl.querySelector('h3')) {
+        titleTodo = parentEl.querySelector('h3').textContent;
+    };
+    if (targetEl.classList.contains('finish-todo')) {
+        parentEl.classList.toggle('done');
+
+        updateTodoStatusLocalStorage(titleTodo);
+    };
+    if (targetEl.classList.contains('remove-todo')) {
+        parentEl.remove();
+
+        removeTodoLocalStorage(titleTodo);
+    };
+    if (targetEl.classList.contains('edit-todo')) {
+        toggleForms();
+
+        editInput.value = titleTodo;
+        oldInputValue = titleTodo;
+    };
 });
 editForm.addEventListener('submit', (e) => {
     e.preventDefault();
