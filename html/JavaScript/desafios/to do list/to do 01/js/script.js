@@ -46,6 +46,15 @@ const updateTodoStatusLocalStorage = (titleTodo) => {
 
     localStorage.setItem('todos', JSON.stringify(todos));
 };
+const updateTodoLocalStorage = (oldInputValue, newInputValue) => {
+    const todos = getTodoLocalStorge();
+
+    todos.forEach((todo) => {
+        todo.text == oldInputValue ? (todo.text = newInputValue) : null;
+    });
+
+    localStorage.setItem('todos', JSON.stringify(todos));
+};
 // funções
 
 
