@@ -1,4 +1,4 @@
-import style from './Aquarios.module.css';
+import style from './Aries.module.css';
 
 import Image from 'next/image';;
 import Link from 'next/link';;
