@@ -110,6 +110,15 @@ const filterTodo = (filterValue) => {
 };
 const searchTodo = (searchValue) => {
     const todos = document.querySelectorAll('.todos');
+    let titleTodo;
+
+    todos.forEach((todo) => {
+        titleTodo = todo.querySelector('h3').textContent.toLowerCase();
+
+        if(!titleTodo.includes(searchValue)) {
+            todo.style.display = 'none';
+        }
+    });
 
 };
 const eraseEditInput = () => {
