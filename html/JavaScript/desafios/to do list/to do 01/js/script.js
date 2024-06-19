@@ -167,30 +167,37 @@ const eraseEditInput = () => {
 // eventos
 todoForm.addEventListener('submit', (e) => {
     e.preventDefault();
-    
+
+    const inputValue = todoInput.value;
+
+    if(inputValue) {
+        saveTodo(inputValue);
+    } else {
+        window.alert('Não é possivel criar uma tarefa sem titulo, por favor verifique e tente novamente');
+    }
 });
 document.addEventListener('click', () => {
 
 });
 editForm.addEventListener('submit', (e) => {
     e.preventDefault();
-    
+
 });
 cancelEditBtn.addEventListener('click', (e) => {
     e.preventDefault();
-    
+
 });
 filterSelect.addEventListener('change', (e) => {
     e.preventDefault();
-    
+
 });
 searchInput.addEventListener('keyup', (e) => {
     e.preventDefault();
-    
+
 });
 eraseBtn.addEventListener('click', (e) => {
     e.preventDefault();
-    
+
 });
 
 loadTodo();
