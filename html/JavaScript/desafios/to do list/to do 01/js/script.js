@@ -218,6 +218,9 @@ filterSelect.addEventListener('change', (e) => {
 searchInput.addEventListener('keyup', (e) => {
     e.preventDefault();
 
+    const searchValue = searchInput.value;
+
+    searchTodo(searchValue);
 });
 eraseBtn.addEventListener('click', (e) => {
     e.preventDefault();
