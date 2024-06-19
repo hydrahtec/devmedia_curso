@@ -211,6 +211,9 @@ cancelEditBtn.addEventListener('click', (e) => {
 filterSelect.addEventListener('change', (e) => {
     e.preventDefault();
 
+    const filterValue = filterSelect.value;
+
+    filterTodo(filterValue);
 });
 searchInput.addEventListener('keyup', (e) => {
     e.preventDefault();
