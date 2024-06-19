@@ -7,3 +7,10 @@
 main {
     min-height: calc(100vh - (10vh + 5vh));
 }
+.link_home {
+    text-decoration: none;
+    padding: 10px 15px;
+    background-color: green;
+    color: #fff;
+    border-radius: 5px;
+}
