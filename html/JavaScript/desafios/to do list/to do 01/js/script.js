@@ -110,6 +110,12 @@ const updateTodo = (oldInputValue, newInputValue) => {
         };
 
     });
+
+    toggleForms();
+
+    todoInput.value = "";
+
+    todoInput.focus;
 };
 const filterTodo = (filterValue) => {
     const todos = document.querySelectorAll('.todos');
@@ -182,6 +188,13 @@ document.addEventListener('click', () => {
 editForm.addEventListener('submit', (e) => {
     e.preventDefault();
 
+    const newinputValue = editInput.value;
+
+    if(newinputValue) {
+        updateTodo(oldInputValue, newinputValue);
+    } else {
+        window.alert('Não é possivel criar uma tarefa sem titulo, por favor verifique e tente novamente');
+    }
 });
 cancelEditBtn.addEventListener('click', (e) => {
     e.preventDefault();
