@@ -199,6 +199,14 @@ editForm.addEventListener('submit', (e) => {
 cancelEditBtn.addEventListener('click', (e) => {
     e.preventDefault();
 
+    editInput.value = "";
+
+    toggleForms();
+
+    todoInput.value = "";
+
+    todoInput.focus();
+
 });
 filterSelect.addEventListener('change', (e) => {
     e.preventDefault();
