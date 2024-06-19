@@ -11,6 +11,11 @@ const todoList = document.querySelector('#todo-list');
 let oldInputValue;
 
 // local Storage
+const getTodoLocalStorge = () => {
+    const todos = JSON.parse(localStorage.getItem('todos')) || [];
+
+    return todos;
+};
 
 // funções
 
