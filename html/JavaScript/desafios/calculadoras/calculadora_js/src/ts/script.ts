@@ -5,18 +5,36 @@ const buttons: NodeListOf<Element> = document.querySelectorAll('#buttons_contain
 
 //classe calculadore
 class Calculator {
+    previousOperationText: Element | null;
+    currentOperationText: Element | null;
+    currentOperation: string;
+
     constructor (previousOperationText: Element | null, currentOperationText: Element | null) {
+        
         this.previousOperationText = previousOperationText;
         this.currentOperationText = currentOperationText;
         this.currentOperation = "";
     };
 
     //add digit to calculator screen
-
+    addDigit(digit: string) {
+        //check if number already has a dot.
+        if (digit === "." && this.currentOperationText?.textContent?.includes('.')) {return}
+        
+        this.currentOperation = digit;
+        updateScreen(digit);
+    };
     //processe all calculator operation
-
+    processOperation(operation: string) {
+        console.log(`operation: ${operation}`);
+    };
     //change values of calculator screen
-
+    updateScreen(operationValue: string | null = null,
+         operator: string | null = null,
+         current: string | null = null,
+         previous: string | null = null) {
+            
+    };
     //change math operation
 
     //DEL a digit
@@ -36,10 +54,9 @@ buttons.forEach((button) => {
     button.addEventListener('click', (e) => {
         const value_btn: string = e.target?.textContent;
         
-        if (+value_btn || value_btn === ".") {
+        if (+value_btn || value_btn === "." || value_btn === "0") {
             calc.addDigit(value_btn);
         } else {
-            console.log(`operation: ${value_btn}`);
             calc.processOperation(value_btn);
         }
     });
