@@ -3,6 +3,7 @@ const previousOperationText: Element | null = document.querySelector('#previous_
 const currentOperationText: Element | null = document.querySelector('#current_operation');
 const buttons: NodeListOf<Element> = document.querySelectorAll('#buttons_container button');
 
+//classe calculadore
 class Calculator {
     constructor (previousOperationText: Element | null, currentOperationText: Element | null) {
         this.previousOperationText = previousOperationText;
@@ -27,8 +28,19 @@ class Calculator {
     //processe an operation
 };
 
+//instancia da classe calculadora
 const calc = new Calculator(previousOperationText, currentOperationText);
 
-buttons.forEach(() => {
-
+//eventos
+buttons.forEach((button) => {
+    button.addEventListener('click', (e) => {
+        const value_btn: string = e.target?.textContent;
+        
+        if (+value_btn || value_btn === ".") {
+            calc.addDigit(value_btn);
+        } else {
+            console.log(`operation: ${value_btn}`);
+            calc.processOperation(value_btn);
+        }
+    });
 });
