@@ -21,7 +21,6 @@ class Calculator {
     }
     ;
     processOperation(operation) {
-        console.log(`operation: ${operation}`);
     }
     ;
     updateScreen(operationValue = null, operator = null, current = null, previous = null) {
@@ -29,6 +28,11 @@ class Calculator {
             this.currentOperationText.textContent += this.currentOperation;
         }
         else {
+            if (previous === "0") {
+                operationValue = current;
+            }
+            this.previousOperationText.textContent = `${operationValue} ${operator}`;
+            this.currentOperationText.textContent = "";
         }
     }
     ;
@@ -37,8 +41,7 @@ class Calculator {
 const calc = new Calculator(previousOperationText, currentOperationText);
 buttons.forEach((button) => {
     button.addEventListener('click', (e) => {
-        const btn = e.target;
-        const value_btn = btn.textContent;
+        const value_btn = e.target.textContent;
         if (+value_btn || value_btn === "." || value_btn === "0") {
             calc.addDigit(value_btn);
         }

@@ -17,7 +17,7 @@ class Calculator {
     };
 
     //add digit to calculator screen
-    addDigit(digit: string | null): void {
+    addDigit(digit: string): void {
         //check if number already has a dot.
         if (digit === "." && this.currentOperationText?.textContent?.includes('.')) {return}
         
@@ -26,17 +26,23 @@ class Calculator {
     };
     //process all calculator operation
     processOperation(operation: string) {
-        console.log(`operation: ${operation}`);
+        //console.log(`operation: ${operation}`);
     };
     //change values of calculator screen
     updateScreen(operationValue: string | null = null,
          operator: string | null = null,
          current: string | null = null,
-         previous: string | null = null) {
+         previous: string | null = null): void {
         if (operationValue === null) {
             this.currentOperationText.textContent += this.currentOperation;
         } else {
-
+            // check if previous values is 0, if is just add current value
+            if (previous === "0") {
+                operationValue = current;
+            }
+            //add current value to previous
+            this.previousOperationText.textContent = `${operationValue} ${operator}`;
+            this.currentOperationText.textContent = "";
         }
     };
     //change math operation
@@ -57,8 +63,7 @@ const calc = new Calculator(previousOperationText, currentOperationText);
 buttons.forEach((button) => {
     button.addEventListener('click', (e) => {
         
-        const btn: HTMLElement = e.target as HTMLElement;
-        const value_btn: string = btn.textContent as string;
+        const value_btn: string = (e.target as HTMLElement).textContent as string;
         
         if (+value_btn || value_btn === "." || value_btn === "0") {
             calc.addDigit(value_btn);
