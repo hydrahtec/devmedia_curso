@@ -17,7 +17,7 @@ class Calculator {
             return;
         }
         this.currentOperation = digit;
-        updateScreen(digit);
+        this.updateScreen();
     }
     ;
     processOperation(operation) {
@@ -25,6 +25,11 @@ class Calculator {
     }
     ;
     updateScreen(operationValue = null, operator = null, current = null, previous = null) {
+        if (operationValue === null) {
+            this.currentOperationText.textContent += this.currentOperation;
+        }
+        else {
+        }
     }
     ;
 }
@@ -32,7 +37,8 @@ class Calculator {
 const calc = new Calculator(previousOperationText, currentOperationText);
 buttons.forEach((button) => {
     button.addEventListener('click', (e) => {
-        const value_btn = e.target?.textContent;
+        const btn = e.target;
+        const value_btn = btn.textContent;
         if (+value_btn || value_btn === "." || value_btn === "0") {
             calc.addDigit(value_btn);
         }

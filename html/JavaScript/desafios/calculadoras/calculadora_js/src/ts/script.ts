@@ -1,15 +1,15 @@
 //selecção de elementos
-const previousOperationText: Element | null = document.querySelector('#previous_operation');
-const currentOperationText: Element | null = document.querySelector('#current_operation');
+const previousOperationText: HTMLElement = document.querySelector('#previous_operation') as HTMLElement;
+const currentOperationText: HTMLElement = document.querySelector('#current_operation') as HTMLElement;
 const buttons: NodeListOf<Element> = document.querySelectorAll('#buttons_container button');
 
 //classe calculadore
 class Calculator {
-    previousOperationText: Element | null;
-    currentOperationText: Element | null;
+    previousOperationText: HTMLElement ;
+    currentOperationText: HTMLElement ;
     currentOperation: string;
 
-    constructor (previousOperationText: Element | null, currentOperationText: Element | null) {
+    constructor (previousOperationText: HTMLElement, currentOperationText: HTMLElement) {
         
         this.previousOperationText = previousOperationText;
         this.currentOperationText = currentOperationText;
@@ -17,14 +17,14 @@ class Calculator {
     };
 
     //add digit to calculator screen
-    addDigit(digit: string) {
+    addDigit(digit: string | null): void {
         //check if number already has a dot.
         if (digit === "." && this.currentOperationText?.textContent?.includes('.')) {return}
         
-        this.currentOperation = digit;
-        updateScreen(digit);
+        this.currentOperation = digit as string;
+        this.updateScreen();
     };
-    //processe all calculator operation
+    //process all calculator operation
     processOperation(operation: string) {
         console.log(`operation: ${operation}`);
     };
@@ -33,7 +33,11 @@ class Calculator {
          operator: string | null = null,
          current: string | null = null,
          previous: string | null = null) {
-            
+        if (operationValue === null) {
+            this.currentOperationText.textContent += this.currentOperation;
+        } else {
+
+        }
     };
     //change math operation
 
@@ -52,7 +56,9 @@ const calc = new Calculator(previousOperationText, currentOperationText);
 //eventos
 buttons.forEach((button) => {
     button.addEventListener('click', (e) => {
-        const value_btn: string = e.target?.textContent;
+        
+        const btn: HTMLElement = e.target as HTMLElement;
+        const value_btn: string = btn.textContent as string;
         
         if (+value_btn || value_btn === "." || value_btn === "0") {
             calc.addDigit(value_btn);
