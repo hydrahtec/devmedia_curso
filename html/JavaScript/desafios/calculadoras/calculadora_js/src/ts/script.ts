@@ -93,7 +93,12 @@ class Calculator {
     };
     //change math operation
     changeOperation(operation: string) {
-
+        const mathOperators: string[] = ["+","-","*","/"];
+        
+        if (!mathOperators.includes(operation)) {
+            return;
+        }
+        this.previousOperationText.textContent = (this.previousOperationText.textContent as string).slice(0, -1) + operation;
     };
     //DEL a digit
     processDelOperator() {

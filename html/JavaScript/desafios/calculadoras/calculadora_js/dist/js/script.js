@@ -78,6 +78,11 @@ class Calculator {
     }
     ;
     changeOperation(operation) {
+        const mathOperators = ["+", "-", "*", "/"];
+        if (!mathOperators.includes(operation)) {
+            return;
+        }
+        this.previousOperationText.textContent = this.previousOperationText.textContent.slice(0, -1) + operation;
     }
     ;
     processDelOperator() {
