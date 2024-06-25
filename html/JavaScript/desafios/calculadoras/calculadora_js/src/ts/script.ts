@@ -97,19 +97,21 @@ class Calculator {
     };
     //DEL a digit
     processDelOperator() {
-        console.log('del');
+        this.currentOperationText.textContent = (this.currentOperationText.textContent as string).slice(0, -1);
     };
     //clear current operation
     clearCurrentOperator() {
-        console.log('ce');
+        this.currentOperationText.textContent = "";
     };
     //clear all operation
     processClearAllOperator() {
-        console.log('c');
+        this.currentOperationText.textContent = "";
+        this.previousOperationText.textContent = "";
     };
     //processe an operation
     processEqualOperator() {
-        console.log('=');
+        let operation: string = (this.previousOperationText.textContent as string).split(" ")[1];
+        this.processOperation(operation);
     };
 };
 

@@ -81,19 +81,21 @@ class Calculator {
     }
     ;
     processDelOperator() {
-        console.log('del');
+        this.currentOperationText.textContent = this.currentOperationText.textContent.slice(0, -1);
     }
     ;
     clearCurrentOperator() {
-        console.log('ce');
+        this.currentOperationText.textContent = "";
     }
     ;
     processClearAllOperator() {
-        console.log('c');
+        this.currentOperationText.textContent = "";
+        this.previousOperationText.textContent = "";
     }
     ;
     processEqualOperator() {
-        console.log('=');
+        let operation = this.previousOperationText.textContent.split(" ")[1];
+        this.processOperation(operation);
     }
     ;
 }
