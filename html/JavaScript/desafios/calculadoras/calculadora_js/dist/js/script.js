@@ -20,7 +20,48 @@ class Calculator {
         this.updateScreen();
     }
     ;
-    processOperation(operation) {
+    processOperation(operator) {
+        if (this.currentOperationText.textContent === "" && operator !== "C") {
+            if (this.previousOperationText.textContent !== "") {
+                this.changeOperation(operator);
+            }
+            return;
+        }
+        let operationValue;
+        let previous = +this.previousOperationText.textContent.split(" ")[0];
+        let current = +this.currentOperationText.textContent;
+        switch (operator) {
+            case '+':
+                operationValue = previous + current;
+                this.updateScreen(operationValue, operator, current, previous);
+                break;
+            case '-':
+                operationValue = previous - current;
+                this.updateScreen(operationValue, operator, current, previous);
+                break;
+            case '*':
+                operationValue = previous * current;
+                this.updateScreen(operationValue, operator, current, previous);
+                break;
+            case '/':
+                operationValue = previous / current;
+                this.updateScreen(operationValue, operator, current, previous);
+                break;
+            case 'DEL':
+                this.processDelOperator();
+                break;
+            case 'CE':
+                this.clearCurrentOperator();
+                break;
+            case 'C':
+                this.processClearAllOperator();
+                break;
+            case '=':
+                this.processEqualOperator();
+                break;
+            default:
+                return;
+        }
     }
     ;
     updateScreen(operationValue = null, operator = null, current = null, previous = null) {
@@ -28,12 +69,31 @@ class Calculator {
             this.currentOperationText.textContent += this.currentOperation;
         }
         else {
-            if (previous === "0") {
+            if (previous === 0) {
                 operationValue = current;
             }
             this.previousOperationText.textContent = `${operationValue} ${operator}`;
             this.currentOperationText.textContent = "";
         }
+    }
+    ;
+    changeOperation(operation) {
+    }
+    ;
+    processDelOperator() {
+        console.log('del');
+    }
+    ;
+    clearCurrentOperator() {
+        console.log('ce');
+    }
+    ;
+    processClearAllOperator() {
+        console.log('c');
+    }
+    ;
+    processEqualOperator() {
+        console.log('=');
     }
     ;
 }
